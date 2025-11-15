@@ -3,50 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StepDevCode.me - Welcome</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="StepDevCode.me - Nơi chia sẻ kiến thức lập trình và phát triển web">
+    <title>StepDevCode.me - Chào mừng bạn đến với thế giới lập trình</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Chào mừng đến với StepDevCode.me</h1>
-            <p class="subtitle">Website của bạn đã sẵn sàng!</p>
-        </header>
-        
-        <main>
-            <section class="intro">
-                <h2>Giới thiệu</h2>
-                <p>Đây là trang web của bạn. Bạn có thể chỉnh sửa nội dung trong file <code>index.html</code> để thêm thông tin của mình.</p>
-            </section>
-            
-            <section class="features">
-                <h2>Tính năng</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>🎨 Đẹp mắt</h3>
-                        <p>Giao diện hiện đại và responsive</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>⚡ Nhanh</h3>
-                        <p>Tải trang nhanh chóng</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📱 Responsive</h3>
-                        <p>Hoạt động tốt trên mọi thiết bị</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">StepDevCode</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#services" class="nav-link">Dịch vụ</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Chào mừng đến với</span>
+                    <span class="title-highlight">StepDevCode.me</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Nơi chia sẻ kiến thức lập trình, phát triển web và công nghệ thông tin
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Khám phá ngay</a>
+                    <a href="#contact" class="btn btn-secondary">Liên hệ</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">💻</div>
+                    <div class="card-text">Code</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-text">Deploy</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">✨</div>
+                    <div class="card-text">Create</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Giới thiệu</h2>
+                <p class="section-subtitle">Về chúng tôi</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>StepDevCode.me</h3>
+                    <p>
+                        Chào mừng bạn đến với StepDevCode.me - nơi chia sẻ kiến thức về lập trình, 
+                        phát triển web và công nghệ thông tin. Chúng tôi cung cấp các bài viết, 
+                        hướng dẫn và tài nguyên hữu ích cho các developer ở mọi cấp độ.
+                    </p>
+                    <p>
+                        Website này được xây dựng với HTML, CSS và JavaScript thuần, 
+                        tối ưu hóa cho hiệu suất và trải nghiệm người dùng tốt nhất.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Dự án</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Bài viết</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1000">0</div>
+                            <div class="stat-label">Người dùng</div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            
-            <section class="contact">
-                <h2>Liên hệ</h2>
-                <p>Thêm thông tin liên hệ của bạn tại đây</p>
-            </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2024 StepDevCode.me - All rights reserved</p>
-        </footer>
-    </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div class="placeholder-content">
+                            <span class="placeholder-icon">🎯</span>
+                            <p>Hình ảnh đại diện</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dịch vụ</h2>
+                <p class="section-subtitle">Những gì chúng tôi cung cấp</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Thiết kế Web</h3>
+                    <p>Thiết kế giao diện hiện đại, responsive và thân thiện với người dùng</p>
+                    <div class="service-features">
+                        <span class="feature-tag">UI/UX</span>
+                        <span class="feature-tag">Responsive</span>
+                        <span class="feature-tag">Modern</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Phát triển Web</h3>
+                    <p>Xây dựng website với công nghệ hiện đại, tối ưu hiệu suất</p>
+                    <div class="service-features">
+                        <span class="feature-tag">HTML/CSS</span>
+                        <span class="feature-tag">JavaScript</span>
+                        <span class="feature-tag">Performance</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Deploy & Hosting</h3>
+                    <p>Triển khai và quản lý website trên các nền tảng cloud hiện đại</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Netlify</span>
+                        <span class="feature-tag">Vercel</span>
+                        <span class="feature-tag">CDN</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Chia sẻ kiến thức</h3>
+                    <p>Blog, hướng dẫn và tài nguyên học tập về lập trình</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Tutorials</span>
+                        <span class="feature-tag">Blog</span>
+                        <span class="feature-tag">Resources</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Liên hệ</h2>
+                <p class="section-subtitle">Hãy kết nối với chúng tôi</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>contact@stepdevcode.me</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🌐</div>
+                        <div class="info-text">
+                            <h4>Website</h4>
+                            <p>www.stepdevcode.me</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Địa chỉ</h4>
+                            <p>Việt Nam</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Tên của bạn</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tin nhắn</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StepDevCode.me</h3>
+                    <p>Nơi chia sẻ kiến thức lập trình và phát triển web</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#about">Giới thiệu</a></li>
+                        <li><a href="#services">Dịch vụ</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Theo dõi</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">📦</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StepDevCode.me - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
