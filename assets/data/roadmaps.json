@@ -1,0 +1,150 @@
+{
+  "roadmaps": [
+    {
+      "id": "ml-data-engineer",
+      "title": "ML Data Engineer",
+      "description": "Complete roadmap to become a Machine Learning Data Engineer",
+      "duration": "12-18 months",
+      "icon": "🤖",
+      "levels": [
+        {
+          "level": "foundation",
+          "title": "Foundation (3-4 months)",
+          "topics": [
+            {
+              "title": "Python Basics",
+              "description": "Master Python fundamentals",
+              "courses": ["python-fundamentals"],
+              "resources": [],
+              "completed": true
+            },
+            {
+              "title": "SQL & Databases",
+              "description": "Learn SQL and database management",
+              "courses": ["sql-basics"],
+              "resources": [],
+              "completed": false
+            },
+            {
+              "title": "Data Structures & Algorithms",
+              "description": "Essential algorithms for data processing",
+              "courses": ["dsa-basics"],
+              "resources": [],
+              "completed": false
+            }
+          ]
+        },
+        {
+          "level": "intermediate",
+          "title": "Intermediate (4-6 months)",
+          "topics": [
+            {
+              "title": "Data Pipelines",
+              "description": "Build ETL pipelines",
+              "courses": ["etl-pipelines"],
+              "resources": [],
+              "completed": false
+            },
+            {
+              "title": "Big Data Tools",
+              "description": "Apache Spark, Hadoop",
+              "courses": ["big-data"],
+              "resources": [],
+              "completed": false
+            }
+          ]
+        },
+        {
+          "level": "advanced",
+          "title": "Advanced (5-8 months)",
+          "topics": [
+            {
+              "title": "ML Infrastructure",
+              "description": "MLOps and production systems",
+              "courses": ["ml-infrastructure"],
+              "resources": [],
+              "completed": false
+            },
+            {
+              "title": "Cloud Platforms",
+              "description": "AWS, GCP, Azure for ML",
+              "courses": ["cloud-ml"],
+              "resources": [],
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps Engineer",
+      "description": "Master DevOps practices and tools",
+      "duration": "10-15 months",
+      "icon": "⚙️",
+      "levels": [
+        {
+          "level": "foundation",
+          "title": "Foundation (2-3 months)",
+          "topics": [
+            {
+              "title": "Linux Basics",
+              "description": "Command line and system administration",
+              "courses": ["linux-basics"],
+              "resources": [],
+              "completed": false
+            },
+            {
+              "title": "Git & Version Control",
+              "description": "Master Git workflows",
+              "courses": ["git-advanced"],
+              "resources": [],
+              "completed": true
+            }
+          ]
+        },
+        {
+          "level": "intermediate",
+          "title": "Intermediate (4-6 months)",
+          "topics": [
+            {
+              "title": "Docker & Containers",
+              "description": "Containerization fundamentals",
+              "courses": ["docker"],
+              "resources": [],
+              "completed": false
+            },
+            {
+              "title": "Kubernetes",
+              "description": "Container orchestration",
+              "courses": ["kubernetes"],
+              "resources": [],
+              "completed": false
+            }
+          ]
+        },
+        {
+          "level": "advanced",
+          "title": "Advanced (4-6 months)",
+          "topics": [
+            {
+              "title": "CI/CD Pipelines",
+              "description": "Jenkins, GitHub Actions, GitLab CI",
+              "courses": ["cicd"],
+              "resources": [],
+              "completed": false
+            },
+            {
+              "title": "Infrastructure as Code",
+              "description": "Terraform, Ansible",
+              "courses": ["iac"],
+              "resources": [],
+              "completed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

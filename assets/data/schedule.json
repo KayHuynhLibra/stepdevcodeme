@@ -1,0 +1,55 @@
+{
+  "settings": {
+    "dailyGoal": 120,
+    "weeklyGoal": 600,
+    "monthlyGoal": 2400,
+    "reminderEnabled": true,
+    "reminderTime": "09:00"
+  },
+  "tasks": [
+    {
+      "id": "task1",
+      "title": "Complete Python Basics - Chapter 3",
+      "course": "Python Programming",
+      "time": 60,
+      "priority": "high",
+      "completed": false,
+      "date": "2024-11-16"
+    },
+    {
+      "id": "task2",
+      "title": "Practice DSA - Arrays Problems",
+      "course": "Data Structures & Algorithms",
+      "time": 45,
+      "priority": "medium",
+      "completed": false,
+      "date": "2024-11-16"
+    },
+    {
+      "id": "task3",
+      "title": "Read Docker Documentation",
+      "course": "DevOps",
+      "time": 30,
+      "priority": "low",
+      "completed": true,
+      "date": "2024-11-16"
+    }
+  ],
+  "logs": [
+    {
+      "id": "log1",
+      "course": "Python Programming",
+      "time": 60,
+      "notes": "Completed Chapter 3 on Functions. Learned about lambda functions and decorators.",
+      "timestamp": "2024-11-16T14:00:00",
+      "date": "2024-11-16"
+    }
+  ],
+  "stats": {
+    "totalDays": 0,
+    "totalHours": 0,
+    "currentStreak": 0,
+    "longestStreak": 0
+  }
+}
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Development Courses - StepDevCode.me">
+    <title>Web Development Courses - StepDevCode.me</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html" class="logo-link">
+                    <span class="logo-text">StepDevCode</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../../about.html" class="nav-link">About</a></li>
+                <li><a href="../../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../index.html" class="nav-link">Courses</a></li>
+                <li><a href="../../roadmaps/index.html" class="nav-link">Roadmaps</a></li>
+                <li><a href="../../learning-schedule/index.html" class="nav-link">Schedule</a></li>
+                <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Web Development Courses</h1>
+            <p class="page-subtitle">Learn modern web development from basics to advanced</p>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- HTML & CSS Course -->
+                <div class="course-card" data-category="web">
+                    <div class="course-header">
+                        <div class="course-icon">📝</div>
+                        <div class="course-badge">In Progress</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">HTML & CSS Fundamentals</h3>
+                        <p class="course-description">
+                            Master HTML5 and CSS3, responsive design, Flexbox, Grid, and modern CSS features.
+                        </p>
+                        <div class="course-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="progress-text">85% Complete</span>
+                        </div>
+                        <div class="course-footer">
+                            <a href="html-css.html" class="course-link">View Course →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Course -->
+                <div class="course-card" data-category="web">
+                    <div class="course-header">
+                        <div class="course-icon">⚡</div>
+                        <div class="course-badge">In Progress</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">JavaScript Complete Guide</h3>
+                        <p class="course-description">
+                            From basics to advanced: ES6+, async/await, DOM manipulation, and modern JavaScript.
+                        </p>
+                        <div class="course-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">ES6</span>
+                            <span class="tag">DOM</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="progress-text">70% Complete</span>
+                        </div>
+                        <div class="course-footer">
+                            <a href="javascript.html" class="course-link">View Course →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- React Course -->
+                <div class="course-card" data-category="web">
+                    <div class="course-header">
+                        <div class="course-icon">⚛️</div>
+                        <div class="course-badge">Not Started</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">React Development</h3>
+                        <p class="course-description">
+                            Build modern user interfaces with React, hooks, context, and state management.
+                        </p>
+                        <div class="course-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Hooks</span>
+                            <span class="tag">State</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                        <div class="course-footer">
+                            <a href="react.html" class="course-link">View Course →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node.js Course -->
+                <div class="course-card" data-category="web">
+                    <div class="course-header">
+                        <div class="course-icon">🟢</div>
+                        <div class="course-badge">In Progress</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Node.js Backend Development</h3>
+                        <p class="course-description">
+                            Server-side JavaScript with Node.js, Express, REST APIs, and database integration.
+                        </p>
+                        <div class="course-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                            <span class="progress-text">50% Complete</span>
+                        </div>
+                        <div class="course-footer">
+                            <a href="nodejs.html" class="course-link">View Course →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <a href="../index.html" class="btn btn-primary">← Back to All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StepDevCode.me</h3>
+                    <p>Personal portfolio showcasing my learning journey and projects.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../index.html">Courses</a></li>
+                        <li><a href="../../roadmaps/index.html">Roadmaps</a></li>
+                        <li><a href="../../learning-schedule/index.html">Schedule</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StepDevCode.me - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/courses.js"></script>
+</body>
+</html>
+

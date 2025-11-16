@@ -1,0 +1,92 @@
+{
+  "categories": [
+    {
+      "id": "web-development",
+      "name": "Web Development",
+      "description": "Learn modern web development technologies",
+      "icon": "🌐",
+      "courses": [
+        {
+          "id": "html-css",
+          "title": "HTML & CSS Fundamentals",
+          "description": "Master HTML5 and CSS3, responsive design, and modern CSS features",
+          "progress": 85,
+          "status": "in-progress",
+          "duration": "40 hours",
+          "level": "beginner",
+          "tags": ["HTML", "CSS", "Responsive", "Flexbox", "Grid"],
+          "resources": []
+        },
+        {
+          "id": "javascript",
+          "title": "JavaScript Complete Guide",
+          "description": "From basics to advanced: ES6+, async/await, DOM manipulation, and more",
+          "progress": 70,
+          "status": "in-progress",
+          "duration": "60 hours",
+          "level": "intermediate",
+          "tags": ["JavaScript", "ES6", "Async", "DOM"],
+          "resources": []
+        }
+      ]
+    },
+    {
+      "id": "programming-languages",
+      "name": "Programming Languages",
+      "description": "Master various programming languages",
+      "icon": "💻",
+      "courses": [
+        {
+          "id": "python",
+          "title": "Python Programming",
+          "description": "Complete Python course from basics to advanced",
+          "progress": 90,
+          "status": "in-progress",
+          "duration": "50 hours",
+          "level": "intermediate",
+          "tags": ["Python", "OOP", "Data Structures"],
+          "resources": []
+        }
+      ]
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science",
+      "description": "Data analysis, machine learning, and data engineering",
+      "icon": "📊",
+      "courses": [
+        {
+          "id": "pandas",
+          "title": "Pandas for Data Analysis",
+          "description": "Learn data manipulation and analysis with Pandas",
+          "progress": 60,
+          "status": "in-progress",
+          "duration": "30 hours",
+          "level": "intermediate",
+          "tags": ["Python", "Pandas", "Data Analysis"],
+          "resources": []
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "description": "Docker, Kubernetes, CI/CD, and cloud deployment",
+      "icon": "🐳",
+      "courses": [
+        {
+          "id": "docker",
+          "title": "Docker & Containerization",
+          "description": "Learn Docker, containers, and container orchestration",
+          "progress": 40,
+          "status": "in-progress",
+          "duration": "25 hours",
+          "level": "beginner",
+          "tags": ["Docker", "Containers", "DevOps"],
+          "resources": []
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Learning Schedule - StepDevCode.me | Track your daily learning progress">
+    <title>Learning Schedule - StepDevCode.me</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <span class="logo-text">StepDevCode</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../courses/index.html" class="nav-link">Courses</a></li>
+                <li><a href="../roadmaps/index.html" class="nav-link">Roadmaps</a></li>
+                <li><a href="index.html" class="nav-link active">Schedule</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Learning Schedule</h1>
+            <p class="page-subtitle">Track your daily learning progress and stay consistent</p>
+        </div>
+    </section>
+
+    <!-- Schedule Navigation -->
+    <section class="schedule-nav-section">
+        <div class="container">
+            <div class="schedule-tabs">
+                <a href="index.html" class="schedule-tab active">Today</a>
+                <a href="daily/index.html" class="schedule-tab">Daily Log</a>
+                <a href="weekly/index.html" class="schedule-tab">Weekly View</a>
+                <a href="monthly/index.html" class="schedule-tab">Monthly View</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Today's Schedule -->
+    <section class="today-schedule-section">
+        <div class="container">
+            <div class="schedule-header">
+                <h2 class="section-title">Today's Learning Plan</h2>
+                <div class="date-display" id="todayDate"></div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="today-stats">
+                <div class="stat-box">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="todayTime">0</div>
+                        <div class="stat-label">Minutes Today</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="todayCompleted">0</div>
+                        <div class="stat-label">Tasks Completed</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="streakDays">0</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Tasks -->
+            <div class="today-tasks">
+                <div class="tasks-header">
+                    <h3>Today's Tasks</h3>
+                    <button class="btn btn-primary btn-small" id="addTaskBtn">+ Add Task</button>
+                </div>
+                <div class="tasks-list" id="tasksList">
+                    <!-- Tasks will be loaded here -->
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" id="task1">
+                        <label for="task1" class="task-label">
+                            <span class="task-title">Complete Python Basics - Chapter 3</span>
+                            <span class="task-course">Python Programming</span>
+                        </label>
+                        <div class="task-time">
+                            <span>60 min</span>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox" id="task2">
+                        <label for="task2" class="task-label">
+                            <span class="task-title">Practice DSA - Arrays Problems</span>
+                            <span class="task-course">Data Structures & Algorithms</span>
+                        </label>
+                        <div class="task-time">
+                            <span>45 min</span>
+                        </div>
+                    </div>
+                    <div class="task-item completed">
+                        <input type="checkbox" class="task-checkbox" id="task3" checked>
+                        <label for="task3" class="task-label">
+                            <span class="task-title">Read Docker Documentation</span>
+                            <span class="task-course">DevOps</span>
+                        </label>
+                        <div class="task-time">
+                            <span>30 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Log -->
+            <div class="learning-log">
+                <h3>Today's Learning Log</h3>
+                <form class="log-form" id="learningLogForm">
+                    <div class="form-group">
+                        <label for="logCourse">Course/Topic</label>
+                        <select id="logCourse" name="course" required>
+                            <option value="">Select course...</option>
+                            <option value="python">Python Programming</option>
+                            <option value="dsa">Data Structures & Algorithms</option>
+                            <option value="web">Web Development</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="logTime">Time Spent (minutes)</label>
+                        <input type="number" id="logTime" name="time" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logNotes">What did you learn?</label>
+                        <textarea id="logNotes" name="notes" rows="4" placeholder="Write about what you learned today..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Log</button>
+                </form>
+
+                <!-- Today's Logs -->
+                <div class="logs-list" id="logsList">
+                    <div class="log-item">
+                        <div class="log-header">
+                            <span class="log-course">Python Programming</span>
+                            <span class="log-time">60 min</span>
+                        </div>
+                        <div class="log-content">
+                            <p>Completed Chapter 3 on Functions. Learned about lambda functions and decorators.</p>
+                        </div>
+                        <div class="log-time-display">2:00 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StepDevCode.me</h3>
+                    <p>Personal portfolio showcasing my learning journey and projects.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../courses/index.html">Courses</a></li>
+                        <li><a href="../roadmaps/index.html">Roadmaps</a></li>
+                        <li><a href="index.html">Schedule</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StepDevCode.me - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/schedule.js"></script>
+</body>
+</html>
+
