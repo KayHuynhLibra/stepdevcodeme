@@ -1,0 +1,222 @@
+/* ===== Nude Color Variations - Xen kẽ ===== */
+
+/* Feature Cards - Xen kẽ màu nude */
+.feature-card:nth-child(1),
+.feature-card:nth-child(4),
+.feature-card:nth-child(7) {
+    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+}
+
+.feature-card:nth-child(2),
+.feature-card:nth-child(5),
+.feature-card:nth-child(8) {
+    background: linear-gradient(135deg, #b8956a 0%, #d4c4a8 100%);
+}
+
+.feature-card:nth-child(3),
+.feature-card:nth-child(6),
+.feature-card:nth-child(9) {
+    background: linear-gradient(135deg, #e6d3b3 0%, #c4a77d 100%);
+}
+
+/* Course Cards - Xen kẽ */
+.course-card:nth-child(1),
+.course-card:nth-child(4),
+.course-card:nth-child(7) {
+    border-top: 4px solid #d4a574;
+}
+
+.course-card:nth-child(2),
+.course-card:nth-child(5),
+.course-card:nth-child(8) {
+    border-top: 4px solid #b8956a;
+}
+
+.course-card:nth-child(3),
+.course-card:nth-child(6),
+.course-card:nth-child(9) {
+    border-top: 4px solid #c4a77d;
+}
+
+.course-card:nth-child(4),
+.course-card:nth-child(7),
+.course-card:nth-child(10) {
+    border-top: 4px solid #d4c4a8;
+}
+
+/* Project Cards - Xen kẽ */
+.project-card:nth-child(1),
+.project-card:nth-child(4),
+.project-card:nth-child(7) {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(201, 168, 130, 0.1) 100%);
+    border-left: 4px solid #d4a574;
+}
+
+.project-card:nth-child(2),
+.project-card:nth-child(5),
+.project-card:nth-child(8) {
+    background: linear-gradient(135deg, rgba(184, 149, 106, 0.1) 0%, rgba(212, 196, 168, 0.1) 100%);
+    border-left: 4px solid #b8956a;
+}
+
+.project-card:nth-child(3),
+.project-card:nth-child(6),
+.project-card:nth-child(9) {
+    background: linear-gradient(135deg, rgba(230, 211, 179, 0.1) 0%, rgba(196, 167, 125, 0.1) 100%);
+    border-left: 4px solid #c4a77d;
+}
+
+/* Timeline Items - Xen kẽ */
+.timeline-item:nth-child(1),
+.timeline-item:nth-child(4),
+.timeline-item:nth-child(7) .timeline-marker {
+    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+}
+
+.timeline-item:nth-child(2),
+.timeline-item:nth-child(5),
+.timeline-item:nth-child(8) .timeline-marker {
+    background: linear-gradient(135deg, #b8956a 0%, #d4c4a8 100%);
+}
+
+.timeline-item:nth-child(3),
+.timeline-item:nth-child(6),
+.timeline-item:nth-child(9) .timeline-marker {
+    background: linear-gradient(135deg, #e6d3b3 0%, #c4a77d 100%);
+}
+
+/* Filter Buttons - Xen kẽ */
+.filter-btn:nth-child(1),
+.filter-btn:nth-child(4),
+.filter-btn:nth-child(7) {
+    border-color: #d4a574;
+    color: #d4a574;
+}
+
+.filter-btn:nth-child(1):hover,
+.filter-btn:nth-child(4):hover,
+.filter-btn:nth-child(7):hover {
+    background: #d4a574;
+}
+
+.filter-btn:nth-child(2),
+.filter-btn:nth-child(5),
+.filter-btn:nth-child(8) {
+    border-color: #b8956a;
+    color: #b8956a;
+}
+
+.filter-btn:nth-child(2):hover,
+.filter-btn:nth-child(5):hover,
+.filter-btn:nth-child(8):hover {
+    background: #b8956a;
+}
+
+.filter-btn:nth-child(3),
+.filter-btn:nth-child(6),
+.filter-btn:nth-child(9) {
+    border-color: #c4a77d;
+    color: #c4a77d;
+}
+
+.filter-btn:nth-child(3):hover,
+.filter-btn:nth-child(6):hover,
+.filter-btn:nth-child(9):hover {
+    background: #c4a77d;
+}
+
+/* Section Backgrounds - Xen kẽ nhẹ */
+section:nth-child(even) {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.03) 0%, rgba(201, 168, 130, 0.03) 100%);
+}
+
+section:nth-child(odd) {
+    background: linear-gradient(135deg, rgba(184, 149, 106, 0.03) 0%, rgba(212, 196, 168, 0.03) 100%);
+}
+
+/* Tags/Badges - Xen kẽ */
+.tag:nth-child(1),
+.tag:nth-child(4),
+.tag:nth-child(7) {
+    background: #d4a574;
+    color: white;
+}
+
+.tag:nth-child(2),
+.tag:nth-child(5),
+.tag:nth-child(8) {
+    background: #b8956a;
+    color: white;
+}
+
+.tag:nth-child(3),
+.tag:nth-child(6),
+.tag:nth-child(9) {
+    background: #c4a77d;
+    color: white;
+}
+
+.tag:nth-child(4),
+.tag:nth-child(7),
+.tag:nth-child(10) {
+    background: #d4c4a8;
+    color: #333;
+}
+
+/* Stats Cards - Xen kẽ */
+.stat-item:nth-child(1),
+.stat-item:nth-child(4),
+.stat-item:nth-child(7) {
+    border-left: 4px solid #d4a574;
+}
+
+.stat-item:nth-child(2),
+.stat-item:nth-child(5),
+.stat-item:nth-child(8) {
+    border-left: 4px solid #b8956a;
+}
+
+.stat-item:nth-child(3),
+.stat-item:nth-child(6),
+.stat-item:nth-child(9) {
+    border-left: 4px solid #c4a77d;
+}
+
+/* Blog/Article Cards - Xen kẽ */
+.blog-card:nth-child(1),
+.blog-card:nth-child(4),
+.blog-card:nth-child(7) {
+    border-top: 3px solid #d4a574;
+}
+
+.blog-card:nth-child(2),
+.blog-card:nth-child(5),
+.blog-card:nth-child(8) {
+    border-top: 3px solid #b8956a;
+}
+
+.blog-card:nth-child(3),
+.blog-card:nth-child(6),
+.blog-card:nth-child(9) {
+    border-top: 3px solid #c4a77d;
+}
+
+/* Hover Effects với màu nude xen kẽ */
+.feature-card:nth-child(1):hover,
+.feature-card:nth-child(4):hover,
+.feature-card:nth-child(7):hover {
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+}
+
+.feature-card:nth-child(2):hover,
+.feature-card:nth-child(5):hover,
+.feature-card:nth-child(8):hover {
+    box-shadow: 0 10px 30px rgba(184, 149, 106, 0.3);
+}
+
+.feature-card:nth-child(3):hover,
+.feature-card:nth-child(6):hover,
+.feature-card:nth-child(9):hover {
+    box-shadow: 0 10px 30px rgba(196, 167, 125, 0.3);
+}
+

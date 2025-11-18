@@ -7,10 +7,19 @@
 }
 
 :root {
-    /* Nude + Purple Color Palette */
+    /* Nude Color Palette - Multiple Shades */
     --color-primary: #d4a574;        /* Warm beige */
     --color-secondary: #9b59b6;      /* Purple */
     --color-accent: #e8d5b7;         /* Light cream */
+    
+    /* Additional Nude Colors */
+    --nude-1: #d4a574;               /* Warm beige */
+    --nude-2: #c9a882;               /* Soft tan */
+    --nude-3: #b8956a;               /* Medium beige */
+    --nude-4: #d4c4a8;               /* Sand beige */
+    --nude-5: #e6d3b3;               /* Pale beige */
+    --nude-6: #c4a77d;               /* Muted tan */
+    
     --color-success: #4caf50;        /* Green */
     --color-warning: #ff9800;        /* Orange */
     --color-error: #f44336;          /* Red */
