@@ -1,0 +1,27 @@
+/* ===== Learning Journey - Tím Đậm Fix ===== */
+
+/* Override gradient background cho Learning Journey title */
+.learning-journey-title {
+    color: #6a1b9a !important;
+    font-weight: 900 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #6a1b9a !important;
+    background-clip: unset !important;
+    text-shadow: none !important;
+}
+
+/* Learning Journey text trong hero description */
+.learning-journey-text {
+    color: #6a1b9a !important;
+    font-weight: 700 !important;
+    text-decoration: none;
+}
+
+/* Button "My Learning Journey" */
+.btn-secondary:contains("My Learning Journey"),
+a[href*="courses"]:contains("My Learning Journey") {
+    color: #6a1b9a !important;
+    font-weight: 700 !important;
+}
+

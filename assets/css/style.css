@@ -857,6 +857,16 @@ footer {
 .learning-journey-title {
     color: #6a1b9a !important;  /* Tím đậm */
     font-weight: 900 !important;  /* Cực đậm */
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #6a1b9a !important;
+    background: none !important;
+    background-clip: unset !important;
+}
+
+/* Learning Journey Text trong hero description */
+.learning-journey-text {
+    color: #6a1b9a !important;  /* Tím đậm */
+    font-weight: 700 !important;  /* In đậm */
 }
 
 .learning-preview {
