@@ -1,62 +1,56 @@
-/* ===== Nude Theme Override ===== */
+/* ===== Nude + Purple Theme Override ===== */
 
 :root {
-    /* Nude Color Palette - Warm & Elegant */
+    /* Nude + Purple Color Palette */
     --color-primary: #d4a574;        /* Warm beige */
-    --color-secondary: #c9a882;      /* Soft tan */
+    --color-secondary: #9b59b6;      /* Purple */
     --color-accent: #e8d5b7;         /* Light cream */
-    --color-success: #a8b89a;       /* Sage green */
-    --color-warning: #d4a574;        /* Warm beige */
-    --color-error: #c9a882;          /* Soft tan */
     
-    /* Text Colors */
-    --text-primary: #5a4a3a;         /* Dark brown */
-    --text-secondary: #8b7355;       /* Medium brown */
-    --text-light: #a89b8a;           /* Light brown */
-    --text-white: #faf8f5;           /* Cream white */
+    /* Text Colors - Giữ màu cũ */
+    --text-primary: #333;            /* Dark gray (màu cũ) */
+    --text-secondary: #666;          /* Medium gray (màu cũ) */
+    --text-light: #999;              /* Light gray (màu cũ) */
+    --text-white: #ffffff;           /* White (màu cũ) */
     
-    /* Background Colors */
+    /* Background Colors - Nude */
     --bg-primary: #faf8f5;           /* Cream white */
-    --bg-secondary: #f5f1eb;         /* Light beige */
-    --bg-dark: #3d3528;              /* Dark brown */
-    --bg-dark-secondary: #4a4035;    /* Medium dark brown */
+    --bg-secondary: #f5f1eb;          /* Light beige */
 }
 
-/* Dark Mode Nude Theme */
+/* Dark Mode - Giữ màu cũ */
 [data-theme="dark"] {
-    --text-primary: #faf8f5;
-    --text-secondary: #e8d5b7;
-    --text-light: #c9a882;
-    --bg-primary: #3d3528;
-    --bg-secondary: #4a4035;
-    --bg-dark: #2a241f;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-light: #888;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
 }
 
-/* Override gradient backgrounds */
+/* Override gradient backgrounds - Nude + Purple */
 .hero-section,
 .community-hero,
 .page-hero {
-    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+    background: linear-gradient(135deg, #d4a574 0%, #9b59b6 100%);
 }
 
-/* Button gradients */
+/* Button gradients - Nude + Purple */
 .btn {
-    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+    background: linear-gradient(135deg, #d4a574 0%, #9b59b6 100%);
 }
 
 .btn:hover {
-    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
 }
 
 /* Navigation active state */
 .nav-link.active {
-    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+    background: linear-gradient(135deg, #d4a574 0%, #9b59b6 100%);
 }
 
 /* Logo gradient */
 .nav-logo .logo-link,
 .logo-text {
-    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+    background: linear-gradient(135deg, #d4a574 0%, #9b59b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -64,33 +58,33 @@
 
 /* Progress bars */
 .progress-fill {
-    background: linear-gradient(135deg, #d4a574 0%, #c9a882 100%);
+    background: linear-gradient(135deg, #d4a574 0%, #9b59b6 100%);
 }
 
-/* Links */
+/* Links - Giữ màu cũ hoặc dùng purple */
 a {
-    color: #d4a574;
+    color: var(--color-secondary);  /* Purple */
 }
 
 a:hover {
-    color: #c9a882;
+    color: var(--color-primary);     /* Nude */
 }
 
 /* Cards hover */
 .feature-card:hover,
 .card:hover {
-    box-shadow: 0 8px 30px rgba(212, 165, 116, 0.2);
+    box-shadow: 0 8px 30px rgba(155, 89, 182, 0.2);
 }
 
 /* Form focus */
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #d4a574;
+    border-color: #9b59b6;
 }
 
 /* Selection */
 ::selection {
-    background: #e8d5b7;
-    color: #5a4a3a;
+    background: #9b59b6;
+    color: #ffffff;
 }
 
