@@ -1,69 +1,87 @@
 export default function MinimalPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-white">
-      <div className="max-w-4xl mx-auto px-6 py-24">
-        {/* Hero Section */}
-        <div className="text-center mb-20">
-          <h1 className="text-6xl font-light text-gray-900 mb-4 tracking-tight">
-            Minimalist Modern
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Maximum White Space */}
+      <div className="max-w-3xl mx-auto px-8 py-32">
+        <div className="text-center mb-32">
+          <h1 className="text-7xl font-extralight text-gray-900 mb-8 tracking-tighter leading-none">
+            Minimalist
+            <br />
+            <span className="font-light">Modern</span>
           </h1>
-          <p className="text-xl text-gray-600 font-light">
-            Clean, simple, elegant design
+          <div className="w-24 h-px bg-gray-300 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-500 font-light tracking-wide">
+            Less is more. Every element serves a purpose.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-light text-gray-900">About</h2>
-            <p className="text-gray-600 leading-relaxed">
-              This minimalist approach focuses on essential elements, 
-              clean typography, and ample white space. Every element 
-              serves a purpose, creating a calm and focused experience.
+        {/* Philosophy Section */}
+        <div className="mb-32 space-y-16">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-extralight text-gray-900 tracking-tight">
+              Philosophy
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg font-light max-w-2xl">
+              Minimalism isn't about having less. It's about having exactly what you need. 
+              This design philosophy embraces white space, clean typography, and purposeful 
+              elements that create a calm, focused experience.
             </p>
           </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-light text-gray-900">Principles</h2>
-            <ul className="space-y-2 text-gray-600">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Less is more</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Purposeful design</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Clean typography</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Generous spacing</span>
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        {/* Projects Preview */}
-        <div className="border-t border-gray-200 pt-12">
-          <h2 className="text-2xl font-light text-gray-900 mb-8">Projects</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
-                <div className="h-32 bg-gray-100 rounded mb-4"></div>
-                <h3 className="text-lg font-light text-gray-900 mb-2">
-                  Project {i}
-                </h3>
-                <p className="text-sm text-gray-600">
-                  A clean and minimal project showcase
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { title: 'Simplicity', desc: 'Remove the unnecessary' },
+              { title: 'Clarity', desc: 'Clear communication' },
+              { title: 'Focus', desc: 'One thing at a time' },
+            ].map((item, i) => (
+              <div key={i} className="space-y-4">
+                <div className="text-5xl font-extralight text-gray-900 mb-4">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <h3 className="text-xl font-light text-gray-900">{item.title}</h3>
+                <p className="text-gray-500 font-light text-sm leading-relaxed">
+                  {item.desc}
                 </p>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Projects - Ultra Clean */}
+        <div className="border-t border-gray-100 pt-20">
+          <h2 className="text-3xl font-extralight text-gray-900 mb-16 tracking-tight">
+            Work
+          </h2>
+          <div className="space-y-12">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="group cursor-pointer"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-light text-gray-900 mb-2">
+                      Project {i}
+                    </h3>
+                    <p className="text-gray-500 font-light text-sm">
+                      A minimal project showcase
+                    </p>
+                  </div>
+                  <span className="text-gray-400 text-sm font-light group-hover:text-gray-900 transition-colors">
+                    →
+                  </span>
+                </div>
+                <div className="h-64 bg-gray-50 border border-gray-100"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer - Minimal */}
+        <div className="mt-32 pt-16 border-t border-gray-100 text-center">
+          <p className="text-gray-400 text-sm font-light">
+            Designed with intention
+          </p>
         </div>
       </div>
     </div>
