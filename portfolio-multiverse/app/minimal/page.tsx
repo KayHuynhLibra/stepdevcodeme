@@ -1,44 +1,87 @@
+import Link from "next/link";
+
 export default function MinimalPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Maximum White Space */}
+      {/* Hero – The Professional */}
       <div className="max-w-3xl mx-auto px-8 py-32">
         <div className="text-center mb-32">
-          <h1 className="text-7xl font-extralight text-gray-900 mb-8 tracking-tighter leading-none">
-            Minimalist
+          <p className="text-xs tracking-[0.3em] text-gray-400 uppercase mb-6">
+            The Dev Multiverse · The Professional
+          </p>
+          <h1 className="text-5xl md:text-7xl font-extralight text-gray-900 mb-8 tracking-tighter leading-none">
+            Hi, I'm{" "}
+            <span className="font-light underline underline-offset-4 decoration-gray-300">
+              Nam
+            </span>
+            .
             <br />
-            <span className="font-light">Modern</span>
+            Full‑stack Developer
           </h1>
           <div className="w-24 h-px bg-gray-300 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-500 font-light tracking-wide">
-            Less is more. Every element serves a purpose.
+          <p className="text-lg md:text-xl text-gray-500 font-light max-w-2xl mx-auto leading-relaxed">
+            I build fast, reliable web experiences with a focus on performance,
+            clarity, and long‑term maintainability.
           </p>
         </div>
 
-        {/* Philosophy Section */}
-        <div className="mb-32 space-y-16">
+        {/* Primary CTAs – dẫn sang 2 vũ trụ còn lại */}
+        <div className="grid md:grid-cols-2 gap-6 mb-28">
+          <Link
+            href="/dark"
+            className="group border border-gray-900 rounded-xl px-6 py-8 text-left hover:bg-gray-900 hover:text-white transition-colors"
+          >
+            <p className="text-xs tracking-[0.25em] uppercase text-gray-400 group-hover:text-gray-300 mb-4">
+              Projects · The Creative
+            </p>
+            <h2 className="text-2xl font-light mb-2">Explore my projects</h2>
+            <p className="text-sm text-gray-500 group-hover:text-gray-200 leading-relaxed">
+              Dark, interactive space to explore UI/UX, motion, and front‑end
+              engineering.
+            </p>
+          </Link>
+
+          <Link
+            href="/terminal"
+            className="group border border-gray-200 rounded-xl px-6 py-8 text-left hover:border-gray-900 transition-colors"
+          >
+            <p className="text-xs tracking-[0.25em] uppercase text-gray-400 mb-4">
+              About · The Coder Core
+            </p>
+            <h2 className="text-2xl font-light mb-2">See my story & stack</h2>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              Retro terminal view into my background, skills, and technical
+              journey.
+            </p>
+          </Link>
+        </div>
+
+        {/* Philosophy – Minimalist mindset */}
+        <div className="mb-24 space-y-16">
           <div className="space-y-6">
             <h2 className="text-3xl font-extralight text-gray-900 tracking-tight">
               Philosophy
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg font-light max-w-2xl">
-              Minimalism isn't about having less. It's about having exactly what you need. 
-              This design philosophy embraces white space, clean typography, and purposeful 
-              elements that create a calm, focused experience.
+              Minimalism isn't about having less. It's about having exactly what
+              you need. I prefer clear structure, simple interfaces, and code
+              that is easy to reason about months later.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { title: 'Simplicity', desc: 'Remove the unnecessary' },
-              { title: 'Clarity', desc: 'Clear communication' },
-              { title: 'Focus', desc: 'One thing at a time' },
+              { title: "Simplicity", desc: "Remove the unnecessary" },
+              { title: "Clarity", desc: "Communicate intent clearly" },
+              { title: "Focus", desc: "One goal per screen" },
             ].map((item, i) => (
-              <div key={i} className="space-y-4">
+              <div key={item.title} className="space-y-4">
                 <div className="text-5xl font-extralight text-gray-900 mb-4">
-                  {String(i + 1).padStart(2, '0')}
+                  {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-xl font-light text-gray-900">{item.title}</h3>
+                <h3 className="text-xl font-light text-gray-900">
+                  {item.title}
+                </h3>
                 <p className="text-gray-500 font-light text-sm leading-relaxed">
                   {item.desc}
                 </p>
@@ -47,41 +90,42 @@ export default function MinimalPage() {
           </div>
         </div>
 
-        {/* Projects - Ultra Clean */}
-        <div className="border-t border-gray-100 pt-20">
-          <h2 className="text-3xl font-extralight text-gray-900 mb-16 tracking-tight">
-            Work
-          </h2>
-          <div className="space-y-12">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="group cursor-pointer"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-light text-gray-900 mb-2">
-                      Project {i}
-                    </h3>
-                    <p className="text-gray-500 font-light text-sm">
-                      A minimal project showcase
-                    </p>
-                  </div>
-                  <span className="text-gray-400 text-sm font-light group-hover:text-gray-900 transition-colors">
-                    →
-                  </span>
-                </div>
-                <div className="h-64 bg-gray-50 border border-gray-100"></div>
-              </div>
-            ))}
-          </div>
+        {/* Quick facts – 3 cột rất tối giản */}
+        <div className="grid md:grid-cols-3 gap-10 border-t border-gray-100 pt-16">
+          {[
+            {
+              label: "Focus",
+              value: "Full‑stack Web",
+              desc: "From design system to deployment pipeline.",
+            },
+            {
+              label: "Strengths",
+              value: "Performance & DX",
+              desc: "Clean architecture, fast load, good dev experience.",
+            },
+            {
+              label: "Stack",
+              value: "TS · React · Node",
+              desc: "Next.js, Tailwind, REST/JSON, SQL/NoSQL.",
+            },
+          ].map((item) => (
+            <div key={item.label} className="space-y-3">
+              <p className="text-xs tracking-[0.25em] uppercase text-gray-400">
+                {item.label}
+              </p>
+              <p className="text-base font-medium text-gray-900">
+                {item.value}
+              </p>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* Footer - Minimal */}
-        <div className="mt-32 pt-16 border-t border-gray-100 text-center">
-          <p className="text-gray-400 text-sm font-light">
-            Designed with intention
-          </p>
+        {/* Footer minimal */}
+        <div className="mt-24 pt-10 border-t border-gray-100 text-center text-xs text-gray-400 tracking-[0.2em] uppercase">
+          Designed like a clean first impression — fast, focused, professional.
         </div>
       </div>
     </div>
