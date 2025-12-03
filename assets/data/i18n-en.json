@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "multiverse": "Multiverse",
+    "courses": "Courses",
+    "roadmaps": "Roadmaps",
+    "roadmapSite": "Roadmap Site",
+    "schedule": "Schedule",
+    "research": "Research",
+    "process": "Process",
+    "admin": "Admin",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hello, I'm",
+      "name": "DESTINY",
+      "subtitle": "Developer | Learner | Creator",
+      "description": "Welcome to my personal portfolio. Here you'll find my learning journey, personal projects, and the courses I've completed. Join me as I continue to grow and build amazing things.",
+      "primaryCta": "View Projects",
+      "secondaryCta": "My Learning Journey"
+    },
+    "aboutPreview": {
+      "title": "About Me",
+      "subtitle": "A passionate developer on a continuous learning journey"
+    }
+  }
+}
+
+

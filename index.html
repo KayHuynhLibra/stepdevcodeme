@@ -41,20 +41,29 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="pages/about.html" class="nav-link">About</a></li>
-                <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
-                <li><a href="courses/index.html" class="nav-link">Courses</a></li>
-                <li><a href="roadmaps/index.html" class="nav-link">Roadmaps</a></li>
-                <li><a href="roadmap-site/index.html" class="nav-link">Roadmap Site</a></li>
-                <li><a href="learning-schedule/index.html" class="nav-link">Schedule</a></li>
-                <li><a href="pages/development-process.html" class="nav-link">Process</a></li>
-                <li><a href="admin/login.html" class="nav-link">Admin</a></li>
-                <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="pages/about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="pages/projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="multiverse/" class="nav-link" data-i18n="nav.multiverse">Multiverse</a></li>
+                <li><a href="courses/index.html" class="nav-link" data-i18n="nav.courses">Courses</a></li>
+                <li><a href="roadmaps/index.html" class="nav-link" data-i18n="nav.roadmaps">Roadmaps</a></li>
+                <li><a href="roadmap-site/index.html" class="nav-link" data-i18n="nav.roadmapSite">Roadmap Site</a></li>
+                <li><a href="learning-schedule/index.html" class="nav-link" data-i18n="nav.schedule">Schedule</a></li>
+                <li><a href="research/index.html" class="nav-link" data-i18n="nav.research">Research</a></li>
+                <li><a href="pages/development-process.html" class="nav-link" data-i18n="nav.process">Process</a></li>
+                <li><a href="admin/login.html" class="nav-link" data-i18n="nav.admin">Admin</a></li>
+                <li><a href="pages/contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button type="button" data-lang-switch="en">EN</button>
+                    <span>/</span>
+                    <button type="button" data-lang-switch="vi">VI</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -70,20 +79,20 @@
                 <div class="hero-layout">
                     <div class="hero-text">
                         <h1 class="hero-title">
-                            <span class="title-greeting">Hello, I'm</span>
-                            <span class="title-name">DESTINY</span>
+                            <span class="title-greeting" data-i18n="home.hero.greeting">Hello, I'm</span>
+                            <span class="title-name" data-i18n="home.hero.name">DESTINY</span>
                         </h1>
-                        <p class="hero-subtitle">
+                        <p class="hero-subtitle" data-i18n="home.hero.subtitle">
                             Developer | Learner | Creator
                         </p>
-                        <p class="hero-description">
+                        <p class="hero-description" data-i18n="home.hero.description">
                             Welcome to my personal portfolio. Here you'll find my <span class="learning-journey-text">learning journey</span>, 
                             personal projects, and the courses I've completed. Join me as I continue 
                             to grow and build amazing things.
                         </p>
                         <div class="hero-buttons">
-                            <a href="pages/projects.html" class="btn btn-primary">View Projects</a>
-                            <a href="courses/index.html" class="btn btn-secondary">My Learning Journey</a>
+                            <a href="pages/projects.html" class="btn btn-primary" data-i18n="home.hero.primaryCta">View Projects</a>
+                            <a href="courses/index.html" class="btn btn-secondary" data-i18n="home.hero.secondaryCta">My Learning Journey</a>
                         </div>
                     </div>
                     <div class="hero-image-wrapper">
@@ -106,8 +115,8 @@
     <section class="about-preview" id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">A passionate developer on a continuous learning journey</p>
+                <h2 class="section-title" data-i18n="home.aboutPreview.title">About Me</h2>
+                <p class="section-subtitle" data-i18n="home.aboutPreview.subtitle">A passionate developer on a continuous learning journey</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -340,5 +349,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/i18n.js"></script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "projects": "Dự án",
+    "multiverse": "Multiverse",
+    "courses": "Khóa học",
+    "roadmaps": "Lộ trình",
+    "roadmapSite": "Roadmap Site",
+    "schedule": "Lịch học",
+    "research": "Research",
+    "process": "Quy trình",
+    "admin": "Admin (demo)",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Xin chào, tôi là",
+      "name": "DESTINY",
+      "subtitle": "Developer | Người học | Người tạo",
+      "description": "Chào mừng bạn đến với portfolio cá nhân của tôi. Tại đây bạn sẽ thấy hành trình học tập, các dự án cá nhân và những khóa học tôi đã hoàn thành.",
+      "primaryCta": "Xem Dự án",
+      "secondaryCta": "Hành trình học tập"
+    },
+    "aboutPreview": {
+      "title": "Về Tôi",
+      "subtitle": "Một developer đam mê học hỏi và phát triển liên tục"
+    }
+  }
+}
+
+
