@@ -1,0 +1,736 @@
+/**
+ * Homepage Clean Minimal Design
+ * Đơn giản, sạch sẽ, dễ nhìn - Tập trung vào nội dung
+ */
+
+/* ============================================
+   Reset & Base - Clean & Simple
+   ============================================ */
+
+/* Hero Section - Minimal & Clean */
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 4rem;
+    background: #ffffff;
+    position: relative;
+}
+
+/* Loại bỏ tất cả decorative elements */
+.hero-section::before,
+.hero-section::after {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Text - Clean Typography */
+.hero-text {
+    text-align: left;
+}
+
+.title-greeting {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #667eea;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.title-name {
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    margin-bottom: 1.25rem;
+    /* Loại bỏ gradient phức tạp */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #1a1a1a;
+    background-clip: unset;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    /* Loại bỏ decorative elements */
+}
+
+.hero-subtitle::before {
+    display: none;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 2rem;
+    max-width: 95%;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Hero Image - Simple & Clean */
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image-frame {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    /* Loại bỏ backdrop-filter và shadow phức tạp */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* Loại bỏ 3D transform */
+    transform: none;
+    transition: transform 0.3s ease;
+}
+
+.hero-image-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-placeholder {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    z-index: 2;
+}
+
+/* Loại bỏ frame decorations */
+.frame-decoration {
+    display: none;
+}
+
+/* ============================================
+   About Preview - Clean Grid
+   ============================================ */
+.about-preview {
+    padding: 5rem 2rem;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.about-preview::before {
+    display: none;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Text Frames - Simple & Clean */
+.text-frame {
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-left: 3px solid #667eea;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    /* Loại bỏ gradient và animations phức tạp */
+}
+
+.text-frame::before {
+    display: none;
+}
+
+.text-frame:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-left-width: 4px;
+}
+
+.text-frame p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin: 0;
+}
+
+.skills-preview {
+    margin-top: 1rem;
+}
+
+.skills-preview h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Skill Tags - Simple Design */
+.skill-tag {
+    padding: 0.5rem 1rem;
+    background: #e9ecef;
+    color: #667eea;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    /* Loại bỏ gradient và shadow phức tạp */
+    box-shadow: none;
+}
+
+.skill-tag:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Stats Cards - Simple Design */
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: sticky;
+    top: 100px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 2rem 1.75rem;
+    border-radius: 16px;
+    text-align: center;
+    color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef;
+    /* Loại bỏ gradient và animations phức tạp */
+}
+
+.stat-card::before {
+    display: none;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #667eea;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #667eea;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* ============================================
+   Featured Projects - Clean Grid
+   ============================================ */
+.featured-projects {
+    padding: 5rem 2rem;
+    background: #ffffff;
+    position: relative;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+/* Loại bỏ gradient border animation */
+.project-card::before {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-color: #667eea;
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image::after {
+    display: none;
+}
+
+.project-content {
+    padding: 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.tech-tag {
+    padding: 0.35rem 0.75rem;
+    background: #f8f9fa;
+    color: #667eea;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #e9ecef;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    flex: 1;
+    min-width: 110px;
+    text-align: center;
+}
+
+/* ============================================
+   Learning Journey - Simple Cards
+   ============================================ */
+.learning-preview {
+    padding: 5rem 2rem;
+    background: #f8f9fa;
+}
+
+.courses-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+}
+
+.course-preview-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+/* Loại bỏ gradient border */
+.course-preview-card::before {
+    display: none;
+}
+
+.course-preview-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-color: #667eea;
+}
+
+.course-icon {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
+.course-preview-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+}
+
+.course-preview-card p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.course-progress-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.progress-bar-mini {
+    flex: 1;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill-mini {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: width 1s ease;
+    /* Loại bỏ shimmer effect */
+}
+
+.progress-fill-mini::after {
+    display: none;
+}
+
+.course-progress-mini span {
+    font-weight: 600;
+    color: #667eea;
+    font-size: 0.95rem;
+    min-width: 40px;
+}
+
+/* ============================================
+   Contact Section - Simple & Clean
+   ============================================ */
+.contact-preview {
+    padding: 5rem 2rem;
+    background: #667eea;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Loại bỏ decorative elements */
+.contact-preview::before {
+    display: none;
+}
+
+.contact-preview .section-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.contact-preview .section-subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.text-frame-accent {
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-left: 3px solid white !important;
+    color: white !important;
+}
+
+.text-frame-accent p {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   Section Headers - Simple Style
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
+    position: relative;
+    display: inline-block;
+}
+
+/* Loại bỏ decorative underline */
+.section-title::after {
+    display: none;
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: #4a5568;
+    font-weight: 400;
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+/* ============================================
+   Buttons - Simple & Clean
+   ============================================ */
+.btn {
+    padding: 0.875rem 1.75rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Loại bỏ ripple effect */
+.btn::before {
+    display: none;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 1200px) {
+    .hero-layout {
+        gap: 3rem;
+    }
+    
+    .about-content {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-description {
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image-frame {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .title-name {
+        font-size: 3.5rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .about-stats {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .stat-card {
+        flex: 1;
+        min-width: 180px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .courses-preview-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 5rem 1rem 3rem;
+        min-height: auto;
+    }
+    
+    .title-name {
+        font-size: 2.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .about-preview,
+    .featured-projects,
+    .learning-preview,
+    .contact-preview {
+        padding: 3.5rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
