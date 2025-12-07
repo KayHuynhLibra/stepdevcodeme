@@ -27,6 +27,28 @@ function updateThemeIcon(theme) {
     }
 }
 
+// ===== Color Scheme Toggle =====
+const colorSchemeToggle = document.getElementById('colorSchemeToggle');
+const colorSchemes = ['blue', 'purple', 'green', 'red', 'orange', 'teal', 'pink'];
+let currentColorIndex = 0;
+
+// Check for saved color scheme preference
+const savedColorScheme = localStorage.getItem('colorScheme') || 'blue';
+if (savedColorScheme && colorSchemes.includes(savedColorScheme)) {
+    html.setAttribute('data-color-scheme', savedColorScheme);
+    currentColorIndex = colorSchemes.indexOf(savedColorScheme);
+}
+
+if (colorSchemeToggle) {
+    colorSchemeToggle.addEventListener('click', () => {
+        currentColorIndex = (currentColorIndex + 1) % colorSchemes.length;
+        const newColorScheme = colorSchemes[currentColorIndex];
+        
+        html.setAttribute('data-color-scheme', newColorScheme);
+        localStorage.setItem('colorScheme', newColorScheme);
+    });
+}
+
 // ===== Sidebar Toggle =====
 const sidebarToggle = document.getElementById('sidebarToggle');
 const sidebar = document.getElementById('sidebar');
