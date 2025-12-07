@@ -1,174 +1,97 @@
-# 📁 Cấu trúc Thư mục - StepDevCode.me
+# 📁 Cấu Trúc StepDevCode.me
 
-## 🎯 Cấu trúc Đã Sắp Xếp
+## 🎯 Tổng Quan
+
+StepDevCode.me bao gồm:
+1. **Static Site** (HTML/CSS/JS) - Site chính
+2. **Portfolio Multiverse** (Next.js + React + TypeScript + Tailwind CSS) - Portfolio 3-style (The Dev Multiverse)
+
+## 📂 Cấu Trúc Chi Tiết
 
 ```
 stepdevcode/
 │
-├── index.html                    # 🏠 Trang chủ (ROOT)
+├── index.html                    # 🏠 Trang chủ
+├── pages/                        # 📄 Các trang HTML
+│   ├── about.html
+│   ├── projects.html
+│   └── contact.html
 │
-├── pages/                        # 📄 CÁC TRANG CHÍNH
-│   ├── about.html               # Giới thiệu
-│   ├── projects.html            # Dự án
-│   ├── contact.html             # Liên hệ
-│   ├── courses.html             # Legacy courses (có thể xóa)
-│   └── development-process.html # Quy trình phát triển
+├── courses/                      # 📚 Khóa học
+├── roadmaps/                     # 🗺️ Learning roadmaps
+├── learning-schedule/            # 📅 Lịch học
+├── resources/                    # 📖 Tài nguyên
+├── community/                    # 👥 Cộng đồng
 │
-├── templates/                    # 📋 TEMPLATES & PLACEHOLDERS
-│   ├── coming-soon.html         # Coming soon page
-│   ├── under-construction.html  # Under construction
-│   └── maintenance.html         # Maintenance page
+├── assets/                       # 🎨 Tài nguyên tĩnh
+│   ├── css/                      # Styles
+│   ├── js/                       # JavaScript
+│   ├── images/                   # Hình ảnh
+│   └── data/                     # JSON data
 │
-├── assets/                       # 🎨 ASSETS
-│   ├── css/
-│   │   ├── style.css            # Main stylesheet
-│   │   ├── themes/              # Theme files
-│   │   │   ├── nude-theme.css
-│   │   │   └── nude-variations.css
-│   │   └── pages/               # Page-specific CSS
-│   │       ├── homepage-enhancements.css
-│   │       └── learning-journey-fix.css
-│   │
-│   ├── js/
-│   │   ├── main.js              # Core JavaScript
-│   │   ├── courses.js           # Courses functionality
-│   │   ├── projects.js          # Projects functionality
-│   │   ├── schedule.js          # Schedule functionality
-│   │   └── development-process.js
-│   │
-│   ├── data/                    # 📊 DATA FILES
-│   │   ├── courses.json
-│   │   ├── roadmaps.json
-│   │   └── schedule.json
-│   │
-│   └── images/                  # 🖼️ IMAGES
-│       ├── courses/
-│       └── roadmaps/
+├── multiverse/                   # ⚠️ Portfolio Multiverse (BUILT)
+│   ├── index.html                # Next.js static export
+│   └── _next/                    # Next.js assets
 │
-├── courses/                      # 📚 COURSES
-│   ├── index.html
-│   ├── web-development/
-│   ├── programming-languages/
-│   ├── data-science/
-│   └── devops/
-│
-├── roadmaps/                     # 🗺️ ROADMAPS
-│   ├── index.html
-│   ├── ml-data-engineer/
-│   ├── devops-engineer/
-│   └── fullstack-developer/
-│
-├── learning-schedule/            # 📅 LEARNING SCHEDULE
-│   ├── index.html
-│   ├── daily/
-│   ├── weekly/
-│   └── monthly/
-│
-├── resources/                    # 📖 RESOURCES
-│   ├── index.html
-│   ├── articles/
-│   ├── tutorials/
-│   └── cheatsheets/
-│
-├── admin/                        # 🔐 ADMIN PANEL
-│   ├── login.html
-│   ├── dashboard.html
-│   └── admin-auth.js
-│
-├── roadmap-site/                 # 🗺️ ROADMAP SITE
-│   ├── index.html
-│   ├── create.html
-│   └── roadmap-editor.js
-│
-├── community/                    # 👥 COMMUNITY
-│   ├── index.html
-│   ├── blog/
-│   ├── forum/
-│   ├── events/
-│   ├── members/
-│   └── projects/
-│
-├── personal/                     # 👤 PERSONAL (reserved)
-│
-├── shared/                       # 🔄 SHARED RESOURCES
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── main.css
-│   │   │   ├── components.css
-│   │   │   ├── nude-theme.css
-│   │   │   ├── nude-variations.css
-│   │   │   └── roadmap-admin.css
-│   │   └── js/
-│   │       └── core.js
-│   └── components/
-│
-├── utils/                        # 🛠️ UTILITIES (reserved)
-│
-└── docs/                         # 📚 DOCUMENTATION (ở root)
-    ├── SUMMARY.md
-    ├── DEPLOYMENT-GUIDE.md
-    └── ...
+└── portfolio-multiverse/          # ⚠️ Source code Next.js
+    ├── app/                      # Next.js pages
+    ├── scripts/
+    │   └── copy-build.js         # Build script
+    ├── next.config.mjs           # Next.js config
+    └── package.json
 ```
 
----
+## 🚀 Deploy
 
-## 📋 Quy Tắc Tổ Chức
+### Static Site (Tự động)
+- Push code → GitHub Pages tự động deploy
+- URL: `https://stepdevcode.me`
 
-### 1. **Root Files**
-- `index.html` - Trang chủ (giữ ở root)
-- `README.md` - Hướng dẫn project
-- `STRUCTURE.md` - File này
+### Multiverse (Cần build)
+```bash
+cd portfolio-multiverse
+npm run deploy
+git add ../multiverse/
+git commit -m "Update multiverse"
+git push
+```
+- URL: `https://stepdevcode.me/multiverse/`
 
-### 2. **Pages Folder**
-- Các trang HTML chính (about, projects, contact)
-- Không bao gồm index.html (ở root)
+## 📝 Lưu Ý
 
-### 3. **Templates Folder**
-- Placeholder pages (coming-soon, maintenance, etc.)
-- Có thể tái sử dụng
+- **Commit**: `multiverse/` (built files)
+- **Không commit**: `portfolio-multiverse/node_modules/`, `out/`, `.next/`
 
-### 4. **Assets Organization**
-- CSS: Tách theo themes và pages
-- JS: Tách theo functionality
-- Data: JSON files
-- Images: Theo category
-
-### 5. **Documentation**
-- Tất cả `.md` files trong `docs/` (root level)
-- Không để trong `stepdevcode/`
+Xem chi tiết: `docs/DEPLOYMENT-STRUCTURE.md`
 
 ---
 
-## 🔄 Migration Plan
+## 🧠 Flow tổng quan (Technical)
 
-### Bước 1: Tạo cấu trúc mới
-✅ Đã tạo: `pages/`, `templates/`, `utils/`
+```text
+DEV FLOW
 
-### Bước 2: Di chuyển files
-- [ ] Di chuyển `about.html`, `projects.html`, `contact.html` → `pages/`
-- [ ] Di chuyển `coming-soon.html`, `maintenance.html`, `under-construction.html` → `templates/`
-- [ ] Di chuyển `.md` files → `docs/` (nếu có trong stepdevcode/)
+Chỉnh sửa Static Site
+  → HTML/CSS/JS trong stepdevcode/
 
-### Bước 3: Tổ chức CSS
-- [ ] Di chuyển theme files → `assets/css/themes/`
-- [ ] Di chuyển page-specific CSS → `assets/css/pages/`
+Chỉnh sửa Portfolio Multiverse
+  → Next.js + TS + Tailwind trong stepdevcode/portfolio-multiverse/app
 
-### Bước 4: Update paths
-- [ ] Cập nhật tất cả links trong HTML
-- [ ] Cập nhật CSS imports
-- [ ] Cập nhật JS paths
+Test Multiverse
+  → cd stepdevcode/portfolio-multiverse
+  → npm run dev
 
----
+Build Multiverse
+  → npm run deploy
+     └─ next build + copy-build.js
+         └─ Copy out/ → stepdevcode/multiverse/
 
-## 📊 File Statistics
+Commit & Push
+  → git add .
+  → git commit -m "Update ..."
+  → git push origin main
 
-- **Total HTML files:** 30+
-- **Total CSS files:** 10+
-- **Total JS files:** 6+
-- **Total JSON files:** 3
-- **Total MD files:** 25+
-
----
-
-**Last Updated:** Structure reorganized
-
+GitHub Pages
+  → Deploy root:        https://stepdevcode.me
+  → Deploy multiverse:  https://stepdevcode.me/multiverse/
+```

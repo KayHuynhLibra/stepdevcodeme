@@ -42,13 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Simple authentication (replace with backend in production)
+// ⚠️ DEMO ONLY - Front-end authentication (NO REAL SECURITY)
+// This is a UI demonstration only. In production, this should be replaced
+// with a secure backend API using JWT, bcrypt, and proper session management.
 function authenticate(username, password) {
-    // Default credentials (change in production!)
+    // Demo credentials (PUBLICLY VISIBLE - NOT SECURE)
     const validUsername = 'admin';
-    const validPassword = 'admin123'; // Change this!
+    const validPassword = 'admin123';
     
-    // In production, this should be a backend API call
+    // Log attempt for demo purposes (remove in production)
+    console.log('[DEMO] Login attempt:', { username, timestamp: new Date().toISOString() });
+    
+    // In production, this should be a backend API call with:
+    // - Password hashing (bcrypt)
+    // - Rate limiting
+    // - Session/JWT tokens
+    // - CSRF protection
     return username === validUsername && password === validPassword;
 }
 
@@ -70,4 +79,5 @@ function requireAuth() {
     }
     return true;
 }
+
 

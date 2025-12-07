@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My Projects - StepDevCode.me | Personal projects and portfolio">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self';">
     <title>Projects - StepDevCode.me</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/themes/nude-theme.css">
     <link rel="stylesheet" href="../assets/css/themes/nude-variations.css">
+    <link rel="stylesheet" href="../assets/css/animations-2025.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -69,8 +71,8 @@
                     <div class="project-image-full">
                         <div class="project-placeholder-full">🚀</div>
                         <div class="project-overlay">
-                            <a href="#" class="project-demo-btn">Live Demo</a>
-                            <a href="#" class="project-code-btn">View Code</a>
+                            <a href="#" class="project-demo-btn btn" onclick="return false;">Live Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-code-btn btn">View Code</a>
                         </div>
                     </div>
                     <div class="project-content-full">
@@ -225,6 +227,7 @@
 
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/projects.js"></script>
+    <script src="../assets/js/animations.js"></script>
 </body>
 </html>
 

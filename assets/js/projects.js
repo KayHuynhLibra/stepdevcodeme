@@ -53,3 +53,4 @@ document.querySelectorAll('.project-card-full').forEach(card => {
     projectObserver.observe(card);
 });
 
+

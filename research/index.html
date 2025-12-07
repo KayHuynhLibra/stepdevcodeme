@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Hub - StepDevCode</title>
+    <meta name="description" content="Research Hub - nơi lưu trữ, tổ chức và ghi chú các bài viết, paper khoa học và bài kỹ thuật bạn đang nghiên cứu.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/themes/nude-theme.css">
+    <link rel="stylesheet" href="../assets/css/themes/nude-variations.css">
+    <link rel="stylesheet" href="../assets/css/research.css">
+</head>
+<body>
+    <header class="research-header">
+        <div class="research-header-inner">
+            <h1 class="research-title">Research Hub</h1>
+            <p class="research-subtitle">
+                Kho lưu trữ & ghi chú các bài khoa học, bài kỹ thuật, paper bạn đang nghiên cứu.
+            </p>
+            <div class="research-meta">
+                <span class="meta-pill">Focus: Computer Science · Web · AI</span>
+                <span class="meta-pill">Mode: Deep Work</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="research-main">
+        <!-- Controls -->
+        <section class="research-controls">
+            <div class="search-group">
+                <label for="searchInput">Tìm bài viết / paper</label>
+                <input type="text" id="searchInput" placeholder="Tìm theo tiêu đề, tác giả, tag..." />
+            </div>
+            <div class="filter-group">
+                <div>
+                    <span class="filter-label">Lọc theo trạng thái:</span>
+                    <button class="filter-pill active" data-status="all">All</button>
+                    <button class="filter-pill" data-status="queue">Queue</button>
+                    <button class="filter-pill" data-status="reading">Reading</button>
+                    <button class="filter-pill" data-status="done">Done</button>
+                </div>
+                <div>
+                    <span class="filter-label">Lọc theo loại:</span>
+                    <button class="filter-pill" data-type="paper">Paper</button>
+                    <button class="filter-pill" data-type="blog">Blog</button>
+                    <button class="filter-pill" data-type="doc">Docs</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Columns: Queue / Reading / Done -->
+        <section class="research-columns">
+            <div class="research-column" data-column="queue">
+                <h2>Reading Queue</h2>
+                <p class="column-desc">Những bài sẽ đọc trong tương lai gần.</p>
+                <div class="research-list" id="queueList"></div>
+            </div>
+
+            <div class="research-column" data-column="reading">
+                <h2>Currently Reading</h2>
+                <p class="column-desc">Những bài đang đọc dở, cần follow-up.</p>
+                <div class="research-list" id="readingList"></div>
+            </div>
+
+            <div class="research-column" data-column="done">
+                <h2>Completed</h2>
+                <p class="column-desc">Những bài đã đọc xong, có ghi chú.</p>
+                <div class="research-list" id="doneList"></div>
+            </div>
+        </section>
+
+        <!-- Notes panel -->
+        <section class="research-notes">
+            <div class="notes-header">
+                <h2>Notes</h2>
+                <p id="notesArticleTitle" class="notes-article-title">
+                    Chọn một bài trong danh sách để xem / ghi chú.
+                </p>
+            </div>
+            <textarea id="notesTextarea" placeholder="Ghi chú ý chính, insight, câu hỏi, ý tưởng ứng dụng..."></textarea>
+            <div class="notes-footer">
+                <button id="saveNotesButton">Lưu ghi chú (LocalStorage)</button>
+                <span id="notesSavedStatus" class="notes-status"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="research-footer">
+        <p>
+            Research Hub · Được xây dựng để hỗ trợ quá trình học & nghiên cứu dài hạn.
+            Dữ liệu trạng thái & ghi chú được lưu trong trình duyệt (LocalStorage).
+        </p>
+    </footer>
+
+    <script src="../assets/js/research.js"></script>
+</body>
+</html>
+
+

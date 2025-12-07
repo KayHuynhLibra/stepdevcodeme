@@ -6,12 +6,14 @@
     <meta name="description" content="StepDevCode.me - Personal Portfolio | Learning Journey, Projects, and Courses">
     <meta name="keywords" content="portfolio, web developer, programming, DSA, projects">
     <meta name="author" content="StepDevCode">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self';">
     <title>StepDevCode.me - Personal Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/themes/nude-theme.css">
     <link rel="stylesheet" href="assets/css/themes/nude-variations.css">
     <link rel="stylesheet" href="assets/css/pages/learning-journey-fix.css">
     <link rel="stylesheet" href="assets/css/pages/homepage-enhancements.css">
+    <link rel="stylesheet" href="assets/css/animations-2025.css">
     <style>
         /* Learning Journey - Tím Đậm - Inline Style */
         .learning-journey-title {
@@ -51,8 +53,10 @@
                 <li><a href="learning-schedule/index.html" class="nav-link" data-i18n="nav.schedule">Schedule</a></li>
                 <li><a href="research/index.html" class="nav-link" data-i18n="nav.research">Research</a></li>
                 <li><a href="pages/development-process.html" class="nav-link" data-i18n="nav.process">Process</a></li>
-                <li><a href="admin/login.html" class="nav-link" data-i18n="nav.admin">Admin</a></li>
                 <li><a href="pages/contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-link" style="opacity: 0.6; cursor: not-allowed;" title="Lab/Playground - Demo Only">
+                    <span style="font-size: 0.85rem;">🔬 Lab</span>
+                </li>
             </ul>
             <div class="nav-actions">
                 <div class="lang-switch">
@@ -73,14 +77,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
+    <section class="hero-section fade-in-up" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-layout">
                     <div class="hero-text">
                         <h1 class="hero-title">
-                            <span class="title-greeting" data-i18n="home.hero.greeting">Hello, I'm</span>
-                            <span class="title-name" data-i18n="home.hero.name">DESTINY</span>
+                            <span class="title-greeting fade-in-up" data-i18n="home.hero.greeting">Hello, I'm</span>
+                            <span class="title-name gradient-text fade-in-up fade-in-up-delay-1" data-i18n="home.hero.name">DESTINY</span>
                         </h1>
                         <p class="hero-subtitle" data-i18n="home.hero.subtitle">
                             Developer | Learner | Creator
@@ -112,7 +116,7 @@
     </section>
 
     <!-- About Preview Section -->
-    <section class="about-preview" id="about">
+    <section class="about-preview animate-on-scroll" id="about">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="home.aboutPreview.title">About Me</h2>
@@ -166,14 +170,14 @@
     </section>
 
     <!-- Featured Projects Section -->
-    <section class="featured-projects" id="projects">
+    <section class="featured-projects animate-on-scroll" id="projects">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Some of my recent work and personal projects</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card fade-in-up fade-in-up-delay-1">
                     <div class="project-image">
                         <div class="project-placeholder">🚀</div>
                     </div>
@@ -188,12 +192,12 @@
                             <span class="tech-tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                            <a href="#" class="project-link">GitHub →</a>
+                            <a href="pages/projects.html" class="project-link btn">View Project →</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link btn">GitHub →</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card fade-in-up fade-in-up-delay-2">
                     <div class="project-image">
                         <div class="project-placeholder">💻</div>
                     </div>
@@ -208,12 +212,12 @@
                             <span class="tech-tag">PostgreSQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                            <a href="#" class="project-link">GitHub →</a>
+                            <a href="pages/projects.html" class="project-link btn">View Project →</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link btn">GitHub →</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card fade-in-up fade-in-up-delay-3">
                     <div class="project-image">
                         <div class="project-placeholder">🎨</div>
                     </div>
@@ -228,8 +232,8 @@
                             <span class="tech-tag">API</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                            <a href="#" class="project-link">GitHub →</a>
+                            <a href="pages/projects.html" class="project-link btn">View Project →</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link btn">GitHub →</a>
                         </div>
                     </div>
                 </div>
@@ -315,10 +319,10 @@
                     <h3>StepDevCode.me</h3>
                     <p>Personal portfolio showcasing my learning journey, projects, and growth as a developer.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="GitHub">📦</a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                        <a href="#" class="social-link" aria-label="Email">📧</a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link magnetic" aria-label="GitHub">📦</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link magnetic" aria-label="LinkedIn">💼</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link magnetic" aria-label="Twitter">🐦</a>
+                        <a href="mailto:contact@stepdevcode.me" class="social-link magnetic" aria-label="Email">📧</a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -350,5 +354,6 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

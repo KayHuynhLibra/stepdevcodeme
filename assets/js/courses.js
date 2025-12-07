@@ -71,3 +71,4 @@ progressBars.forEach(bar => {
     progressObserver.observe(bar);
 });
 
+
