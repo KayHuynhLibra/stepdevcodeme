@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../assets/css/themes/nude-theme.css">
     <link rel="stylesheet" href="../assets/css/themes/nude-variations.css">
     <link rel="stylesheet" href="../assets/css/research.css">
+    <!-- Minimal Design CSS -->
+    <link rel="stylesheet" href="assets/css/pages/homepage-clean-minimal.css">
+    <link rel="stylesheet" href="assets/css/pages/sidebar-nav.css">
+    <link rel="stylesheet" href="assets/css/pages/navbar-optimized.css">
+
 </head>
 <body>
     <header class="research-header">
@@ -23,6 +28,26 @@
             </div>
         </div>
     </header>
+    <!-- Sidebar for Hidden Menu Items -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li><a href="roadmaps.html" class="sidebar-link">Roadmaps</a></li>
+                <li><a href="multiverse/" class="sidebar-link">Multiverse</a></li>
+                <li><a href="schedule.html" class="sidebar-link">Schedule</a></li>
+                <li><a href="research.html" class="sidebar-link">Research</a></li>
+                <li><a href="pages/development-process.html" class="sidebar-link">Process</a></li>
+                <li><a href="admin/login.html" class="sidebar-link">Admin</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
 
     <main class="research-main">
         <!-- Controls -->
@@ -93,6 +118,7 @@
     </footer>
 
     <script src="../assets/js/research.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
 

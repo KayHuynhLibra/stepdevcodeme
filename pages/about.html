@@ -39,6 +39,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Minimal Design CSS -->
+    <link rel="stylesheet" href="../assets/css/pages/homepage-clean-minimal.css">
+    <link rel="stylesheet" href="../assets/css/pages/sidebar-nav.css">
+    <link rel="stylesheet" href="../assets/css/pages/navbar-optimized.css">
+
 </head>
 <body>
     <!-- Skip Link for Accessibility -->
@@ -60,10 +65,7 @@
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="../courses.html" class="nav-link">Courses</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link" onclick="return false;">More ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../roadmaps.html" class="dropdown-link">Roadmaps</a></li>
+                
                         <li><a href="../multiverse/" class="dropdown-link">Multiverse</a></li>
                         <li><a href="../schedule.html" class="dropdown-link">Schedule</a></li>
                         <li><a href="../research.html" class="dropdown-link">Research</a></li>
@@ -71,6 +73,9 @@
                 </li>
             </ul>
             <div class="nav-actions">
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar" title="Menu">
+                    <span class="menu-icon">☰</span>
+                </button>
                 <div class="lang-switch">
                     <button type="button" data-lang-switch="en">EN</button>
                     <span>/</span>
@@ -78,6 +83,10 @@
                 </div>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <span class="theme-icon">🌙</span>
+                </button>
+            
+                <button class="color-scheme-toggle" id="colorSchemeToggle" aria-label="Change color scheme" title="Change color">
+                    <span class="color-icon">🎨</span>
                 </button>
             </div>
             <div class="hamburger" id="hamburger">
@@ -88,6 +97,26 @@
         </div>
         </nav>
     </header>
+    <!-- Sidebar for Hidden Menu Items -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li><a href="../roadmaps.html" class="sidebar-link">Roadmaps</a></li>
+                <li><a href="../multiverse/" class="sidebar-link">Multiverse</a></li>
+                <li><a href="../schedule.html" class="sidebar-link">Schedule</a></li>
+                <li><a href="../research.html" class="sidebar-link">Research</a></li>
+                <li><a href="../pages/development-process.html" class="sidebar-link">Process</a></li>
+                <li><a href="../admin/login.html" class="sidebar-link">Admin</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
 
     <!-- Main Content -->
     <main id="main-content" role="main">
