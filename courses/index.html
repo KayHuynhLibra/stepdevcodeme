@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="All Courses - StepDevCode.me | Browse courses by category">
+    
+    <!-- Primary Meta Tags -->
+    <title>All Courses - StepDevCode.me | Web Development, Programming, Data Science & DevOps</title>
+    <meta name="title" content="All Courses - StepDevCode.me | Web Development, Programming, Data Science & DevOps">
+    <meta name="description" content="Browse courses by category: Web Development, Programming Languages, Data Science, and DevOps. Track your learning progress and master new skills.">
+    <meta name="keywords" content="courses, web development, programming, data science, devops, learning, tutorials, online courses, coding courses">
+    <meta name="author" content="StepDevCode">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stepdevcode.me/courses/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stepdevcode.me/courses/">
+    <meta property="og:title" content="All Courses - StepDevCode.me">
+    <meta property="og:description" content="Browse courses by category: Web Development, Programming Languages, Data Science, and DevOps.">
+    <meta property="og:image" content="https://stepdevcode.me/assets/images/courses-og.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Courses - StepDevCode.me">
+    <meta name="twitter:description" content="Browse courses by category and track your learning progress.">
+    
+    <!-- Security -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
     <title>All Courses - StepDevCode.me</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../shared/assets/css/nude-theme.css">
@@ -25,16 +54,30 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                <li><a href="../pages/projects.html" class="nav-link">Projects</a></li>
                 <li><a href="index.html" class="nav-link active">Courses</a></li>
-                <li><a href="../roadmaps/index.html" class="nav-link">Roadmaps</a></li>
-                <li><a href="../learning-schedule/index.html" class="nav-link">Schedule</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link" onclick="return false;">More ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../roadmaps/index.html" class="dropdown-link">Roadmaps</a></li>
+                        <li><a href="../multiverse/" class="dropdown-link">Multiverse</a></li>
+                        <li><a href="../learning-schedule/index.html" class="dropdown-link">Schedule</a></li>
+                        <li><a href="../research/index.html" class="dropdown-link">Research</a></li>
+                    </ul>
+                </li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button type="button" data-lang-switch="en">EN</button>
+                    <span>/</span>
+                    <button type="button" data-lang-switch="vi">VI</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -56,7 +99,7 @@
         <div class="container">
             <div class="categories-grid">
                 <!-- Web Development -->
-                <div class="category-card">
+                <div class="category-card fade-in-up fade-in-up-delay-1">
                     <div class="category-icon">🌐</div>
                     <h2 class="category-title">Web Development</h2>
                     <p class="category-description">
@@ -72,7 +115,7 @@
                 </div>
 
                 <!-- Programming Languages -->
-                <div class="category-card">
+                <div class="category-card fade-in-up fade-in-up-delay-2">
                     <div class="category-icon">💻</div>
                     <h2 class="category-title">Programming Languages</h2>
                     <p class="category-description">
@@ -88,7 +131,7 @@
                 </div>
 
                 <!-- Data Science -->
-                <div class="category-card">
+                <div class="category-card fade-in-up fade-in-up-delay-3">
                     <div class="category-icon">📊</div>
                     <h2 class="category-title">Data Science</h2>
                     <p class="category-description">
@@ -104,7 +147,7 @@
                 </div>
 
                 <!-- DevOps -->
-                <div class="category-card">
+                <div class="category-card fade-in-up fade-in-up-delay-4">
                     <div class="category-icon">🐳</div>
                     <h2 class="category-title">DevOps</h2>
                     <p class="category-description">
