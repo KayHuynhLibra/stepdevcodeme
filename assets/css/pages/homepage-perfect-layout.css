@@ -1,0 +1,910 @@
+/**
+ * Homepage Perfect Layout - Bố cục hoàn hảo
+ * Modern, professional, với visual hierarchy tối ưu
+ * Spacing, typography, và flow hoàn hảo
+ */
+
+/* ============================================
+   CSS Variables - Design System
+   ============================================ */
+:root {
+    /* Layout */
+    --max-width: 1400px;
+    --section-padding: 6rem 2rem;
+    --section-padding-mobile: 4rem 1rem;
+    --container-padding: 0 2rem;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+    
+    /* Grid Gaps */
+    --gap-sm: 1.5rem;
+    --gap-md: 2.5rem;
+    --gap-lg: 4rem;
+    --gap-xl: 5rem;
+    
+    /* Colors */
+    --color-primary: #667eea;
+    --color-primary-dark: #5568d3;
+    --color-primary-light: #818cf8;
+    --color-accent: #764ba2;
+    --color-text: #1a1a1a;
+    --color-text-secondary: #4a5568;
+    --color-text-muted: #718096;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8f9fa;
+    --color-border: #e9ecef;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3.5rem;
+    --font-size-6xl: 5rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12);
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   Base Layout Reset
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+/* ============================================
+   Hero Section - Perfect Layout
+   ============================================ */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--gap-xl);
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Hero Text - Perfect Typography */
+.hero-text {
+    text-align: left;
+}
+
+.hero-title {
+    margin: 0;
+    padding: 0;
+}
+
+.title-greeting {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.9;
+}
+
+.title-name {
+    display: block;
+    font-size: var(--font-size-6xl);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    background: linear-gradient(135deg, #1a1a1a 0%, #667eea 50%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.hero-subtitle::before {
+    content: '';
+    width: 4px;
+    height: 28px;
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    border-radius: 2px;
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 92%;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+/* Hero Image - Perfect Frame */
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image-frame {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    transition: all var(--transition-normal);
+}
+
+.hero-image-frame:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(102, 126, 234, 0.25);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-placeholder {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: white;
+    z-index: 2;
+}
+
+.frame-decoration {
+    display: none;
+}
+
+/* ============================================
+   About Preview - Perfect Grid
+   ============================================ */
+.about-preview {
+    padding: var(--section-padding);
+    background: var(--color-bg);
+    position: relative;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--gap-xl);
+    align-items: start;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.text-frame {
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-primary);
+    background: var(--color-bg-secondary);
+    transition: all var(--transition-normal);
+}
+
+.text-frame:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-lg);
+    border-left-width: 6px;
+    background: var(--color-bg);
+}
+
+.text-frame p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.skills-preview {
+    margin-top: var(--spacing-sm);
+}
+
+.skills-preview h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.skill-tag {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-bg-secondary);
+    color: var(--color-primary);
+    border-radius: 25px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
+}
+
+.skill-tag:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Stats Cards - Perfect Stack */
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    position: sticky;
+    top: 120px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    color: white;
+    box-shadow: var(--shadow-xl);
+    transition: all var(--transition-normal);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.35);
+}
+
+.stat-number {
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: var(--font-size-lg);
+    opacity: 0.95;
+    font-weight: 600;
+}
+
+/* ============================================
+   Featured Projects - Perfect Grid
+   ============================================ */
+.featured-projects {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+    position: relative;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-md);
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.project-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--color-border);
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+}
+
+.project-image {
+    height: 240px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-content {
+    padding: var(--spacing-xl);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.project-description {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.tech-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-bg-secondary);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    border: 1px solid var(--color-border);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-link {
+    flex: 1;
+    text-align: center;
+    min-width: 120px;
+}
+
+/* ============================================
+   Learning Journey - Perfect Cards
+   ============================================ */
+.learning-preview {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+}
+
+.courses-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-md);
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.course-preview-card {
+    background: var(--color-bg);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.course-preview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+.course-preview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+}
+
+.course-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+    display: block;
+}
+
+.course-preview-card h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.course-preview-card p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+
+.course-progress-mini {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.progress-bar-mini {
+    flex: 1;
+    height: 10px;
+    background: var(--color-bg-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill-mini {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+.course-progress-mini span {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    min-width: 50px;
+}
+
+/* ============================================
+   Contact Section - Perfect CTA
+   ============================================ */
+.contact-preview {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-preview::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.contact-preview .section-title {
+    color: white;
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-preview .section-subtitle {
+    color: rgba(255,255,255,0.95);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.text-frame-accent {
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.25) !important;
+    border-left: 5px solid white !important;
+    color: white !important;
+}
+
+.text-frame-accent p {
+    color: white !important;
+    font-size: var(--font-size-xl);
+}
+
+/* ============================================
+   Section Headers - Perfect Style
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+/* ============================================
+   Buttons - Perfect Style
+   ============================================ */
+.btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    display: inline-block;
+    transition: all var(--transition-normal);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* ============================================
+   Responsive Design - Perfect Breakpoints
+   ============================================ */
+@media (max-width: 1200px) {
+    .hero-layout {
+        gap: var(--gap-lg);
+    }
+    
+    .about-content {
+        gap: var(--gap-lg);
+    }
+    
+    .projects-grid,
+    .courses-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap-md);
+    }
+}
+
+@media (max-width: 968px) {
+    :root {
+        --section-padding: 5rem 1.5rem;
+        --font-size-6xl: 4rem;
+        --font-size-5xl: 3rem;
+    }
+    
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--gap-lg);
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image-frame {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--gap-lg);
+    }
+    
+    .about-stats {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .stat-card {
+        flex: 1;
+        min-width: 220px;
+    }
+    
+    .projects-grid,
+    .courses-preview-grid {
+        grid-template-columns: 1fr;
+        gap: var(--gap-md);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 4rem 1rem;
+        --font-size-6xl: 3rem;
+        --font-size-5xl: 2.5rem;
+        --font-size-4xl: 2rem;
+    }
+    
+    .hero-section {
+        min-height: auto;
+        padding: 5rem 1rem 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        width: 100%;
+    }
+    
+    .contact-preview .section-title {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+/* ============================================
+   Smooth Animations
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+}
+
+/* ============================================
+   Typography Hierarchy
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin: 0;
+}
+
+p {
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* ============================================
+   Visual Polish
+   ============================================ */
+.hero-section,
+.about-preview,
+.featured-projects,
+.learning-preview,
+.contact-preview {
+    position: relative;
+}
+
+/* Remove any conflicting styles */
+.hero-section::after {
+    display: none;
+}
+
+/* Learning Journey Title - Special Color */
+.learning-journey-title {
+    color: #6a1b9a !important;
+    font-weight: 900 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #6a1b9a !important;
+    background-clip: unset !important;
+}
+
+.learning-journey-text {
+    color: #6a1b9a !important;
+    font-weight: 700 !important;
+}
+
+/* ============================================
+   Override Conflicting Styles
+   ============================================ */
+.hero-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%) !important;
+}
+
+.about-preview {
+    background: #ffffff !important;
+}
+
+.featured-projects {
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%) !important;
+}
+
+.learning-preview {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%) !important;
+}
+
+.contact-preview {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
