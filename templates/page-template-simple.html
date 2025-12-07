@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Configuration & Loader - Loads meta tags, CSS, and navigation dynamically -->
+    <script src="../assets/js/page-config.js"></script>
+    <script src="../assets/js/page-loader.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation - Will be injected by page-loader.js -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <span class="logo-text">StepDevCode</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <!-- Navigation will be injected here -->
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button type="button" data-lang-switch="en">EN</button>
+                    <span>/</span>
+                    <button type="button" data-lang-switch="vi">VI</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Your page content here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StepDevCode.me</h3>
+                    <p>Personal portfolio showcasing my learning journey, projects, and growth as a developer.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/about.html">About</a></li>
+                        <li><a href="../pages/projects.html">Projects</a></li>
+                        <li><a href="../courses/index.html">Courses</a></li>
+                        <li><a href="../roadmaps/index.html">Roadmaps</a></li>
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StepDevCode.me - All rights reserved</p>
+                <p class="footer-note">Built with ❤️ to document my journey</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts - Will be loaded by page-loader.js -->
+    <!-- Additional page-specific scripts can be added here -->
+</body>
+</html>
+
