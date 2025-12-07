@@ -32,8 +32,6 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    
-    <title>About - StepDevCode.me</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/themes/nude-theme.css">
     <link rel="stylesheet" href="../assets/css/themes/nude-variations.css">
@@ -43,8 +41,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="../index.html" class="logo-link">
@@ -77,18 +80,18 @@
                     <span class="theme-icon">🌙</span>
                 </button>
             </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">About Me</h1>
@@ -196,9 +199,10 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

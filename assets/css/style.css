@@ -2680,3 +2680,24 @@ footer {
     }
 }
 
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #667eea;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10000;
+    font-weight: 600;
+    border-radius: 0 0 4px 0;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
