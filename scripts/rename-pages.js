@@ -199,13 +199,14 @@ if (require.main === module) {
     console.log('This script will:');
     console.log('1. Rename index.html files to specific names');
     console.log('2. Update links in all HTML files');
-    console.log('\n⚠️  Make sure to backup your files first!\n');
+    console.log('\n⚠️  Starting automatic rename process...\n');
     
-    // Uncomment to run:
-    // renameFiles();
-    // updateAllLinks();
+    // Run the rename process
+    renameFiles();
+    updateAllLinks();
     
-    console.log('\n✅ Script ready. Uncomment the function calls to execute.');
+    console.log('\n✅ Script execution completed!');
+    console.log('📝 Please review the changes before committing.');
 }
 
 module.exports = { renameFiles, updateAllLinks, MAPPING, URL_MAPPING };

@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learning Journey & Courses - StepDevCode.me | My educational path and completed courses">
-    <title>Learning Journey - StepDevCode.me</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="shared/assets/css/nude-theme.css">
-    <link rel="stylesheet" href="shared/assets/css/nude-variations.css">
+    
+    <!-- Primary Meta Tags -->
+    <title>All Courses - StepDevCode.me | Web Development, Programming, Data Science & DevOps</title>
+    <meta name="title" content="All Courses - StepDevCode.me | Web Development, Programming, Data Science & DevOps">
+    <meta name="description" content="Browse courses by category: Web Development, Programming Languages, Data Science, and DevOps. Track your learning progress and master new skills.">
+    <meta name="keywords" content="courses, web development, programming, data science, devops, learning, tutorials, online courses, coding courses">
+    <meta name="author" content="StepDevCode">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stepdevcode.me/courses.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stepdevcode.me/courses/">
+    <meta property="og:title" content="All Courses - StepDevCode.me">
+    <meta property="og:description" content="Browse courses by category: Web Development, Programming Languages, Data Science, and DevOps.">
+    <meta property="og:image" content="https://stepdevcode.me/assets/images/courses-og.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Courses - StepDevCode.me">
+    <meta name="twitter:description" content="Browse courses by category and track your learning progress.">
+    
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <title>All Courses - StepDevCode.me</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../shared/assets/css/nude-theme.css">
+    <link rel="stylesheet" href="../shared/assets/css/nude-variations.css">
+    <link rel="stylesheet" href="../assets/css/animations-2025.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,22 +48,36 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html" class="logo-link">
+                <a href="../index.html" class="logo-link">
                     <span class="logo-text">StepDevCode</span>
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="courses/index.html" class="nav-link active">Courses</a></li>
-                <li><a href="roadmaps/index.html" class="nav-link">Roadmaps</a></li>
-                <li><a href="learning-schedule/index.html" class="nav-link">Schedule</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                <li><a href="../pages/projects.html" class="nav-link">Projects</a></li>
+                <li><a href="index.html" class="nav-link active">Courses</a></li>
+                <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link" onclick="return false;">More ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmaps.html" class="dropdown-link">Roadmaps</a></li>
+                        <li><a href="../multiverse/" class="dropdown-link">Multiverse</a></li>
+                        <li><a href="schedule.html" class="dropdown-link">Schedule</a></li>
+                        <li><a href="research.html" class="dropdown-link">Research</a></li>
+                    </ul>
+                </li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button type="button" data-lang-switch="en">EN</button>
+                    <span>/</span>
+                    <button type="button" data-lang-switch="vi">VI</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -42,176 +87,79 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="courses-hero">
+    <section class="page-hero">
         <div class="container">
-            <div class="courses-hero-content">
-                <h1 class="courses-title">Learning Journey & Courses</h1>
-                <p class="courses-subtitle">Documenting my educational path, completed courses, and continuous learning</p>
-            </div>
+            <h1 class="page-title">All Courses</h1>
+            <p class="page-subtitle">Browse courses by category and track your learning progress</p>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section class="courses-section">
+    <!-- Courses Categories -->
+    <section class="courses-categories-section">
         <div class="container">
-            <!-- Filter Tabs -->
-            <div class="course-filters">
-                <button class="filter-btn active" data-filter="all">All Courses</button>
-                <button class="filter-btn" data-filter="dsa">DSA</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="other">Other</button>
-            </div>
-
-            <!-- Courses Grid -->
-            <div class="courses-grid" id="coursesGrid">
-                <!-- DSA Course 1 -->
-                <div class="course-card" data-category="dsa" id="dsa-basics">
-                    <div class="course-header">
-                        <div class="course-icon">📊</div>
-                        <div class="course-badge">In Progress</div>
+            <div class="categories-grid">
+                <!-- Web Development -->
+                <div class="category-card fade-in-up fade-in-up-delay-1">
+                    <div class="category-icon">🌐</div>
+                    <h2 class="category-title">Web Development</h2>
+                    <p class="category-description">
+                        Learn modern web development technologies including HTML, CSS, JavaScript, 
+                        React, Node.js, and full-stack development.
+                    </p>
+                    <div class="category-stats">
+                        <span>12 Courses</span>
+                        <span>•</span>
+                        <span>120+ Hours</span>
                     </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Data Structures & Algorithms</h3>
-                        <p class="course-description">
-                            Learning fundamental data structures and algorithms from basics to advanced. 
-                            Covering Arrays, Linked Lists, Trees, Graphs, and sorting/searching algorithms.
-                        </p>
-                        <div class="course-tags">
-                            <span class="tag">Arrays</span>
-                            <span class="tag">Trees</span>
-                            <span class="tag">Graphs</span>
-                            <span class="tag">Sorting</span>
-                        </div>
-                        <div class="course-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 65%"></div>
-                            </div>
-                            <span class="progress-text">65% Complete</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="courses.html#dsa-basics" class="course-link">View Details →</a>
-                        </div>
-                    </div>
+                    <a href="web-development/index.html" class="btn btn-primary">Explore Web Dev →</a>
                 </div>
 
-                <!-- DSA Course 2 -->
-                <div class="course-card" data-category="dsa" id="dsa-analysis">
-                    <div class="course-header">
-                        <div class="course-icon">🔍</div>
-                        <div class="course-badge completed">Completed</div>
+                <!-- Programming Languages -->
+                <div class="category-card fade-in-up fade-in-up-delay-2">
+                    <div class="category-icon">💻</div>
+                    <h2 class="category-title">Programming Languages</h2>
+                    <p class="category-description">
+                        Master programming languages: Python, JavaScript, Java, Go, Rust, 
+                        and more. From basics to advanced concepts.
+                    </p>
+                    <div class="category-stats">
+                        <span>8 Courses</span>
+                        <span>•</span>
+                        <span>80+ Hours</span>
                     </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Algorithm Analysis & Complexity</h3>
-                        <p class="course-description">
-                            Understanding time and space complexity of algorithms. 
-                            Big O notation, time complexity, space complexity analysis.
-                        </p>
-                        <div class="course-tags">
-                            <span class="tag">Big O</span>
-                            <span class="tag">Complexity</span>
-                            <span class="tag">Analysis</span>
-                        </div>
-                        <div class="course-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%"></div>
-                            </div>
-                            <span class="progress-text">100% Complete</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="courses.html#dsa-analysis" class="course-link">View Details →</a>
-                        </div>
-                    </div>
+                    <a href="programming-languages/index.html" class="btn btn-primary">Explore Languages →</a>
                 </div>
 
-                <!-- Web Development Course -->
-                <div class="course-card" data-category="web" id="web-dev">
-                    <div class="course-header">
-                        <div class="course-icon">🌐</div>
-                        <div class="course-badge">In Progress</div>
+                <!-- Data Science -->
+                <div class="category-card fade-in-up fade-in-up-delay-3">
+                    <div class="category-icon">📊</div>
+                    <h2 class="category-title">Data Science</h2>
+                    <p class="category-description">
+                        Data analysis, machine learning, pandas, numpy, visualization, 
+                        and data engineering fundamentals.
+                    </p>
+                    <div class="category-stats">
+                        <span>10 Courses</span>
+                        <span>•</span>
+                        <span>100+ Hours</span>
                     </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Full Stack Web Development</h3>
-                        <p class="course-description">
-                            Building complete web applications with HTML, CSS, JavaScript, 
-                            Node.js, and modern frameworks.
-                        </p>
-                        <div class="course-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">React</span>
-                        </div>
-                        <div class="course-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 80%"></div>
-                            </div>
-                            <span class="progress-text">80% Complete</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="courses.html#web-dev" class="course-link">View Details →</a>
-                        </div>
-                    </div>
+                    <a href="data-science/index.html" class="btn btn-primary">Explore Data Science →</a>
                 </div>
 
-                <!-- Other Course -->
-                <div class="course-card" data-category="other" id="docker-course">
-                    <div class="course-header">
-                        <div class="course-icon">🐳</div>
-                        <div class="course-badge">In Progress</div>
+                <!-- DevOps -->
+                <div class="category-card fade-in-up fade-in-up-delay-4">
+                    <div class="category-icon">🐳</div>
+                    <h2 class="category-title">DevOps</h2>
+                    <p class="category-description">
+                        Docker, Kubernetes, CI/CD, cloud deployment, infrastructure as code, 
+                        and DevOps best practices.
+                    </p>
+                    <div class="category-stats">
+                        <span>6 Courses</span>
+                        <span>•</span>
+                        <span>60+ Hours</span>
                     </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Docker & Containerization</h3>
-                        <p class="course-description">
-                            Learning Docker, containerization, and deployment with Docker Compose.
-                        </p>
-                        <div class="course-tags">
-                            <span class="tag">Docker</span>
-                            <span class="tag">Containers</span>
-                            <span class="tag">DevOps</span>
-                        </div>
-                        <div class="course-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 40%"></div>
-                            </div>
-                            <span class="progress-text">40% Complete</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="courses.html#docker-course" class="course-link">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more courses as needed -->
-            </div>
-
-            <!-- Learning Path Section -->
-            <div class="learning-path">
-                <h2 class="section-title">Learning Path Timeline</h2>
-                <div class="path-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Foundation</h3>
-                            <p>Learning programming basics and fundamental data structures</p>
-                            <span class="timeline-date">2024 Q1</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Intermediate</h3>
-                            <p>Advancing in algorithms and web development</p>
-                            <span class="timeline-date">2024 Q2</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Advanced</h3>
-                            <p>Deep diving into system design and DevOps</p>
-                            <span class="timeline-date">2024 Q3-Q4</span>
-                        </div>
-                    </div>
+                    <a href="devops/index.html" class="btn btn-primary">Explore DevOps →</a>
                 </div>
             </div>
         </div>
@@ -228,12 +176,10 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="courses/index.html">Courses</a></li>
-                        <li><a href="roadmaps/index.html">Roadmaps</a></li>
-                        <li><a href="learning-schedule/index.html">Schedule</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Courses</a></li>
+                        <li><a href="roadmaps.html">Roadmaps</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -243,7 +189,8 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/courses.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
 </body>
 </html>
+

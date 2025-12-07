@@ -76,14 +76,6 @@ const PAGE_CONFIG = {
         },
 
         // Courses index
-        'courses/index.html': {
-            title: 'All Courses - StepDevCode.me | Web Development, Programming, Data Science & DevOps',
-            description: 'Browse courses by category: Web Development, Programming Languages, Data Science, and DevOps. Track your learning progress and master new skills.',
-            keywords: 'courses, web development, programming, data science, devops, learning, tutorials, online courses, coding courses',
-            canonical: '/courses.html',
-            ogImage: '/assets/images/courses-og.jpg',
-            activeNav: 'courses'
-        },
         'courses.html': {
             title: 'All Courses - StepDevCode.me | Web Development, Programming, Data Science & DevOps',
             description: 'Browse courses by category: Web Development, Programming Languages, Data Science, and DevOps. Track your learning progress and master new skills.',
@@ -94,13 +86,6 @@ const PAGE_CONFIG = {
         },
 
         // Web Development courses
-        'courses/web-development/index.html': {
-            title: 'Web Development Courses - StepDevCode.me',
-            description: 'Learn modern web development technologies including HTML, CSS, JavaScript, React, Node.js, and full-stack development.',
-            keywords: 'web development, html, css, javascript, react, nodejs, full stack, frontend, backend',
-            canonical: '/courses-web-development.html',
-            activeNav: 'courses'
-        },
         'courses-web-development.html': {
             title: 'Web Development Courses - StepDevCode.me',
             description: 'Learn modern web development technologies including HTML, CSS, JavaScript, React, Node.js, and full-stack development.',
@@ -110,13 +95,6 @@ const PAGE_CONFIG = {
         },
 
         // Programming Languages courses
-        'courses/programming-languages/index.html': {
-            title: 'Programming Languages Courses - StepDevCode.me',
-            description: 'Master programming languages: Python, JavaScript, Java, Go, Rust, and more. From basics to advanced concepts.',
-            keywords: 'programming languages, python, javascript, java, go, rust, coding languages',
-            canonical: '/courses-programming-languages.html',
-            activeNav: 'courses'
-        },
         'courses-programming-languages.html': {
             title: 'Programming Languages Courses - StepDevCode.me',
             description: 'Master programming languages: Python, JavaScript, Java, Go, Rust, and more. From basics to advanced concepts.',
@@ -126,13 +104,6 @@ const PAGE_CONFIG = {
         },
 
         // Data Science courses
-        'courses/data-science/index.html': {
-            title: 'Data Science Courses - StepDevCode.me',
-            description: 'Data analysis, machine learning, pandas, numpy, visualization, and data engineering fundamentals.',
-            keywords: 'data science, machine learning, data analysis, pandas, numpy, data visualization',
-            canonical: '/courses-data-science.html',
-            activeNav: 'courses'
-        },
         'courses-data-science.html': {
             title: 'Data Science Courses - StepDevCode.me',
             description: 'Data analysis, machine learning, pandas, numpy, visualization, and data engineering fundamentals.',
@@ -142,13 +113,6 @@ const PAGE_CONFIG = {
         },
 
         // DevOps courses
-        'courses/devops/index.html': {
-            title: 'DevOps Courses - StepDevCode.me',
-            description: 'Docker, Kubernetes, CI/CD, cloud deployment, infrastructure as code, and DevOps best practices.',
-            keywords: 'devops, docker, kubernetes, cicd, cloud deployment, infrastructure as code',
-            canonical: '/courses-devops.html',
-            activeNav: 'courses'
-        },
         'courses-devops.html': {
             title: 'DevOps Courses - StepDevCode.me',
             description: 'Docker, Kubernetes, CI/CD, cloud deployment, infrastructure as code, and DevOps best practices.',
@@ -158,13 +122,6 @@ const PAGE_CONFIG = {
         },
 
         // Roadmaps index
-        'roadmaps/index.html': {
-            title: 'Learning Roadmaps - StepDevCode.me | ML Data Engineer, DevOps, and more',
-            description: 'Structured paths to become ML Data Engineer, DevOps Engineer, Full Stack Developer, and more. Follow step-by-step learning roadmaps.',
-            keywords: 'roadmaps, learning path, ml data engineer, devops engineer, full stack developer, career path',
-            canonical: '/roadmaps.html',
-            activeNav: 'roadmaps'
-        },
         'roadmaps.html': {
             title: 'Learning Roadmaps - StepDevCode.me | ML Data Engineer, DevOps, and more',
             description: 'Structured paths to become ML Data Engineer, DevOps Engineer, Full Stack Developer, and more. Follow step-by-step learning roadmaps.',
@@ -174,13 +131,6 @@ const PAGE_CONFIG = {
         },
 
         // Learning Schedule
-        'learning-schedule/index.html': {
-            title: 'Learning Schedule - StepDevCode.me | Track Your Daily Learning Progress',
-            description: 'Track your daily learning progress, set goals, and manage your learning schedule effectively.',
-            keywords: 'learning schedule, daily learning, progress tracking, learning goals',
-            canonical: '/schedule.html',
-            activeNav: 'schedule'
-        },
         'schedule.html': {
             title: 'Learning Schedule - StepDevCode.me | Track Your Daily Learning Progress',
             description: 'Track your daily learning progress, set goals, and manage your learning schedule effectively.',
@@ -190,13 +140,6 @@ const PAGE_CONFIG = {
         },
 
         // Research
-        'research/index.html': {
-            title: 'Research - StepDevCode.me | Development Research & Notes',
-            description: 'Research notes, development insights, and technical documentation.',
-            keywords: 'research, development notes, technical documentation, insights',
-            canonical: '/research.html',
-            activeNav: 'research'
-        },
         'research.html': {
             title: 'Research - StepDevCode.me | Development Research & Notes',
             description: 'Research notes, development insights, and technical documentation.',
@@ -206,13 +149,6 @@ const PAGE_CONFIG = {
         },
 
         // Resources
-        'resources/index.html': {
-            title: 'Learning Resources - StepDevCode.me | Articles, Tutorials, and Cheatsheets',
-            description: 'Articles, tutorials, and quick reference guides for web development and programming.',
-            keywords: 'resources, articles, tutorials, cheatsheets, learning materials',
-            canonical: '/resources.html',
-            activeNav: 'resources'
-        },
         'resources.html': {
             title: 'Learning Resources - StepDevCode.me | Articles, Tutorials, and Cheatsheets',
             description: 'Articles, tutorials, and quick reference guides for web development and programming.',
@@ -266,9 +202,9 @@ const PAGE_CONFIG = {
         pageSpecific: {
             'index.html': ['assets/js/i18n.js'],
             'pages/projects.html': ['assets/js/projects.js'],
-            'courses/index.html': ['assets/js/courses.js'],
-            'learning-schedule/index.html': ['assets/js/schedule.js'],
-            'research/index.html': ['assets/js/research.js']
+            'courses.html': ['assets/js/courses.js'],
+            'schedule.html': ['assets/js/schedule.js'],
+            'research.html': ['assets/js/research.js']
         }
     }
 };
