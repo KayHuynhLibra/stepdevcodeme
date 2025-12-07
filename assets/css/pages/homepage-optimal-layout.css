@@ -1,0 +1,780 @@
+/**
+ * Homepage Optimal Layout - Bố cục đẹp nhất
+ * Modern, professional, với visual hierarchy tốt
+ */
+
+/* ============================================
+   Layout Variables
+   ============================================ */
+:root {
+    --layout-max-width: 1400px;
+    --section-padding: 6rem 2rem;
+    --section-padding-mobile: 4rem 1rem;
+    --grid-gap: 3rem;
+    --grid-gap-mobile: 2rem;
+}
+
+/* ============================================
+   Hero Section - Optimal Layout
+   ============================================ */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.title-greeting {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.title-name {
+    display: block;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hero-subtitle::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* Hero Image - Modern Frame */
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image-frame {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image-frame:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.2);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-placeholder {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    z-index: 2;
+}
+
+/* Hide frame decorations */
+.frame-decoration {
+    display: none;
+}
+
+/* ============================================
+   About Preview - Optimal Grid
+   ============================================ */
+.about-preview {
+    padding: var(--section-padding);
+    background: #ffffff;
+    position: relative;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.text-frame {
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #667eea;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.text-frame:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+    border-left-width: 6px;
+    background: #ffffff;
+}
+
+.text-frame p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin: 0;
+}
+
+.skills-preview {
+    margin-top: 0.5rem;
+}
+
+.skills-preview h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    padding: 0.6rem 1.25rem;
+    background: #e9ecef;
+    color: #667eea;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.skill-tag:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Stats Cards - Vertical Stack */
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 100px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.25);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.35);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 600;
+}
+
+/* ============================================
+   Featured Projects - Optimal Grid
+   ============================================ */
+.featured-projects {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: var(--layout-max-width);
+    margin: 0 auto 3rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+}
+
+.project-image {
+    height: 220px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    padding: 0.4rem 0.9rem;
+    background: #f8f9fa;
+    color: #667eea;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #e9ecef;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.project-link {
+    flex: 1;
+    text-align: center;
+    min-width: 120px;
+}
+
+/* ============================================
+   Learning Journey - Optimal Cards
+   ============================================ */
+.learning-preview {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.courses-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: var(--layout-max-width);
+    margin: 0 auto 3rem;
+}
+
+.course-preview-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-preview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.course-preview-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+}
+
+.course-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.course-preview-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.course-preview-card p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.course-progress-mini {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-bar-mini {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill-mini {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+.course-progress-mini span {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1rem;
+    min-width: 45px;
+}
+
+/* ============================================
+   Contact Section - Optimal CTA
+   ============================================ */
+.contact-preview {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-preview::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.contact-preview .section-title {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-preview .section-subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.text-frame-accent {
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2) !important;
+    border-left: 4px solid white !important;
+    color: white !important;
+}
+
+.text-frame-accent p {
+    color: white !important;
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   Section Headers - Optimal Style
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #4a5568;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ============================================
+   Container - Optimal Width
+   ============================================ */
+.container {
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   Responsive Design - Optimal Breakpoints
+   ============================================ */
+@media (max-width: 1200px) {
+    .hero-layout {
+        gap: 4rem;
+    }
+    
+    .about-content {
+        gap: 4rem;
+    }
+    
+    .projects-grid,
+    .courses-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    :root {
+        --section-padding: 5rem 1.5rem;
+    }
+    
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image-frame {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    
+    .title-name {
+        font-size: 4rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-stats {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .stat-card {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .projects-grid,
+    .courses-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 4rem 1rem;
+    }
+    
+    .hero-section {
+        min-height: auto;
+        padding: 5rem 1rem 3rem;
+    }
+    
+    .title-name {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Smooth Scroll Behavior
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   Section Spacing - Optimal Rhythm
+   ============================================ */
+section {
+    position: relative;
+}
+
+section + section {
+    margin-top: 0;
+}
+
+/* ============================================
+   Visual Hierarchy - Optimal Typography
+   ============================================ */
+h1, h2, h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
+p {
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+/* ============================================
+   Buttons - Optimal Style
+   ============================================ */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
