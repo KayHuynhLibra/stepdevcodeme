@@ -3,11 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="StepDevCode.me - Personal Portfolio | Learning Journey, Projects, and Courses">
-    <meta name="keywords" content="portfolio, web developer, programming, DSA, projects">
+    
+    <!-- Primary Meta Tags -->
+    <title>StepDevCode.me - Personal Portfolio | Web Developer & Learner</title>
+    <meta name="title" content="StepDevCode.me - Personal Portfolio | Web Developer & Learner">
+    <meta name="description" content="Personal portfolio showcasing my learning journey, projects, and growth as a developer. Explore courses, roadmaps, and development resources.">
+    <meta name="keywords" content="portfolio, web developer, programming, DSA, projects, learning journey, courses, roadmaps, full stack developer, frontend, backend">
     <meta name="author" content="StepDevCode">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stepdevcode.me/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stepdevcode.me/">
+    <meta property="og:title" content="StepDevCode.me - Personal Portfolio | Web Developer & Learner">
+    <meta property="og:description" content="Personal portfolio showcasing my learning journey, projects, and growth as a developer. Explore courses, roadmaps, and development resources.">
+    <meta property="og:image" content="https://stepdevcode.me/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="StepDevCode.me">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://stepdevcode.me/">
+    <meta name="twitter:title" content="StepDevCode.me - Personal Portfolio | Web Developer & Learner">
+    <meta name="twitter:description" content="Personal portfolio showcasing my learning journey, projects, and growth as a developer.">
+    <meta name="twitter:image" content="https://stepdevcode.me/assets/images/og-image.jpg">
+    <meta name="twitter:creator" content="@stepdevcode">
+    
+    <!-- Additional SEO -->
+    <meta name="geo.region" content="VN">
+    <meta name="geo.placename" content="Vietnam">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="StepDevCode">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Security -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self';">
-    <title>StepDevCode.me - Personal Portfolio</title>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/themes/nude-theme.css">
     <link rel="stylesheet" href="assets/css/themes/nude-variations.css">
@@ -46,16 +93,16 @@
                 <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
                 <li><a href="pages/about.html" class="nav-link" data-i18n="nav.about">About</a></li>
                 <li><a href="pages/projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
-                <li><a href="multiverse/" class="nav-link" data-i18n="nav.multiverse">Multiverse</a></li>
                 <li><a href="courses/index.html" class="nav-link" data-i18n="nav.courses">Courses</a></li>
-                <li><a href="roadmaps/index.html" class="nav-link" data-i18n="nav.roadmaps">Roadmaps</a></li>
-                <li><a href="roadmap-site/index.html" class="nav-link" data-i18n="nav.roadmapSite">Roadmap Site</a></li>
-                <li><a href="learning-schedule/index.html" class="nav-link" data-i18n="nav.schedule">Schedule</a></li>
-                <li><a href="research/index.html" class="nav-link" data-i18n="nav.research">Research</a></li>
-                <li><a href="pages/development-process.html" class="nav-link" data-i18n="nav.process">Process</a></li>
                 <li><a href="pages/contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
-                <li class="nav-link" style="opacity: 0.6; cursor: not-allowed;" title="Lab/Playground - Demo Only">
-                    <span style="font-size: 0.85rem;">🔬 Lab</span>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link" onclick="return false;">More ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmaps/index.html" class="dropdown-link">Roadmaps</a></li>
+                        <li><a href="multiverse/" class="dropdown-link">Multiverse</a></li>
+                        <li><a href="learning-schedule/index.html" class="dropdown-link">Schedule</a></li>
+                        <li><a href="research/index.html" class="dropdown-link">Research</a></li>
+                    </ul>
                 </li>
             </ul>
             <div class="nav-actions">
